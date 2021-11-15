@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!--Localization-->
+<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery_i18n/jquery.i18n.js"></script>
+<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery_i18n/jquery.i18n.language.js"></script>
+<script src="jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+<!--Concrete Localization-->
+<script src="jquery_i18n/main-jquery_i18n.js"></script>
+
+
+<!-- CSS -->
+<link href="css/footer.css" rel="stylesheet">
+
+<link href="css/default.css" rel="stylesheet">
+
+<link href="css/index.css" rel="stylesheet">
+
+
+<title>Pelayo Figaredo</title>
+<link rel="icon" href="images/icon.ico">
+</head>
+<body>
+
+<!--Navigation bar-->
+<section>
+  <div id="nav"> </div>
+  <script>
+$(function(){
+  $("#nav").load("navBar.html #navBar");
+});
+</script> 
+</section>
+<!--end of Navigation bar-->
+<section>
+  <div class="jumbotron text-center mt-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 data-i18n="studies_h10">My career in video game design and development:</h1>
+          <p data-i18n="studies_p1">I'm currently on my fourth and final year of this career, here's a little something of each year to show.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Year 1-->
+<section>
+  <div class="container" id="year">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="yearTitle" data-i18n="studies_h11">First year</h1>
+          <div class="studiesImage">
+            <img id="studiesImage" src="images/studies/nonogramas.png" style="width: 300px;"class="rounded mx-auto float-left" alt="Nonogramas de Pelayo">
+          </div>
+       <div id = "paddedP">
+           <p data-i18n="studies_p2">In the first year I used Windows Forms to create an implementation of the puzzle known as nonogram created by designer Tetsuya Nishio. </p>
+           <p data-i18n="studies_p3"> It includes more than 30 different nonograms of different sizes. Inside this nonogram the player must guess which of the cells are part of the
+              drawing and which are not by using the information provided. The drawings are readed from .txt during execution. After committing a number of mistakes
+               dependant of the size the user is forced to restart the puzzle.</p>
+               <p data-i18n="[html]studies_p4">You can download and check the code on <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a></p>
+           
+              </div>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/y-Hdd4flIdY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!--Year 2-->
+<section>
+    <div class="container"  id="year">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="yearTitle" data-i18n="studies_h12">Second year</h1>
+          <p data-i18n="studies_p5">During my second year I discovered the 3D art world and thus I created a sort of walking simulator to showcase my works. Code wise it has nothing interesting, but it encompasses
+             lot's of hours of learning and discovery about modeling, texturing, shading and animation.</p>
+          <p  data-i18n="[html]studies_p6">The exe can be found on <a href="https://octoyisus.itch.io/museum"  target="_blank"> Itch.io </a> </p>
+          <p></p>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-3 col-6"><img class="img-fluid float-right" src="images/studies/museum_0000.png" alt=""></div>
+        <div class="col-md-3 col-6"><img class="img-fluid float-left" src="images/studies/museum_0001.png" alt=""></div>
+        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-right" src="images/studies/museum_0002.png" alt=""></div>
+        <div class="col-md-3 col-6 mt-md-0 mt-1"><img class="img-fluid float-left" src="images/studies/museum_0003.png" alt=""></div>
+      </div>
+    </div>
+  </section>
+
+<!--Year 3-->
+<section>
+    <div class="container"  id="year">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="yearTitle" data-i18n="studies_h13">Third year</h1>
+          <p data-i18n="[html]studies_p7">My third year was a busy one. The workload was huge, but the results were pretty satisfying. It was also the year I developed <a href="becomeRed.html">Become Red</a>.
+          Codewise it was the year of the AI. I created a bunch of projects during that course, but the most exciting two are the following, both of them use Unity and C#</p>
+      
+          <P data-i18n="[html]studies_p8">The first on is a simulation of hunter/prey behaviour using final state machines. The agents only can access the information picked up by their senses, and the simulation can be configured 
+            during execution. The project is available on <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a></p>
+            <div >
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/RWhRDV2_9jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p data-i18n="[html]studies_p9">The second one is an ecosystem simulator. The animal behaviour is also governed by a finite state machine. It also incorporates genetic algorithms, so the creature's offspring inherits 
+              traits from both parents with a random variation on top. The terrain in which the simulation takes place is procedural generated using Perlin noise. The project is available on 
+              <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a></p>
+              <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pJgWhJ1NRnc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <p data-i18n="studies_p10">Lastly, I wanna show an animation created as an homage/video-clip of a song from one of my favourite bands. The facial animation was done by filming myself singing with tracking dots drawn 
+                on my face, and then, tracking their movement and applying it to a 3D model of my face.</p>
+                <div>
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/CL7cVETScxc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--Year 4 TODO -->
+
+  <!--Footer-->
+<section>
+  <div id="footer"> </div>
+  <script>
+$(function(){
+  $("#footer").load("footer.html #footer");
+});
+</script> 
+</section>
+<!--Footer-->
+
+</body>
+</html>

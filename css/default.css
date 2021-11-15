@@ -1,0 +1,39 @@
+
+#paddedP{
+    padding: 20px;
+}
+
+.yearTitle{
+  border-bottom-style: double;
+}
+
+#year{
+    text-align: left;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      margin-top: 20px;
+      border-style: groove ;
+      background-image: radial-gradient(circle,#f3efea,#a7a29f);
+      border-radius: 20px;
+  }
+  #year p
+  {
+      text-align: left;
+  }
+
+  .jumbotron{
+    background-color: #DAD6D3;
+    background-image: radial-gradient(circle,#f3efea,#a7a29f);
+  }
+
+  #studiesImage{
+    padding-right: 20px;
+    
+  }
+
+  #clearBG{
+    background-color: #DAD6D3;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 7px;
+  }

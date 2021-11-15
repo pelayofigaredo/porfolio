@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!--Localization Lib-->
+<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery_i18n/jquery.i18n.js"></script>
+<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery_i18n/jquery.i18n.language.js"></script>
+<script src="jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+<!--Concrete Localization-->
+<script src="jquery_i18n/main-jquery_i18n.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+
+<!-- CSS -->
+<link href="css/default.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+
+<title>Pelayo Figaredo</title>
+<link rel="icon" href="images/icon.ico">
+</head>
+<body>
+
+<!--Navigation bar-->
+<section>
+  <div id="nav"> </div>
+  <script>
+$(function(){
+  $("#nav").load("navBar.html #navBar");
+});
+</script> 
+</section>
+<!--end of Navigation bar-->
+
+<section>
+  <div class="bigContainer">
+  <div class="jumbotron text-center mt-2">
+    <div class="container">
+   
+      <div class="row">
+        <div class="col-12">
+          <h1 id="name">Pelayo Figaredo</h1>
+          <p data-i18n="index_p1">Digital storytelling.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" id="clearBG">
+    <div class="row">
+      <div class="col-6 text-center">
+        <img width="360 px" src="images/frontpage.png" class="rounded mx-auto d-block">
+      </div>
+      <div class="col-6 text-center">
+        <p data-i18n="index_p2">Estudiadnte de videojuegos y amante del diseño, la música, el cine , el arte 3D y la programacíon.</p>
+        <p data-i18n="index_p3">Creo en el poder de la nueva frontera digital interactiva para cambiar las vidas de la gente a través de experiencias únicas, trascendentales y personales.</p>
+        <p data-i18n="index_p4">Actualmente resido en Madrid, donde curso mi último año del grado de ingeniería del videojuego en la escuela de diseño ESNE. </p>
+        <p data-i18n="index_p5">Siempre en busca de oportunidades para aprender y crear nuevos proyectos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--Footer-->
+<section>
+  <div id="footer"> </div>
+  <script>
+$(function(){
+  $("#footer").load("footer.html #footer");
+});
+</script> 
+</section>
+<!--Footer-->
+
+</body>
+<script src="js/nameChanger.js"></script>
+<script>startChange($("h1#name"),"Pelayo Figaredo","Octoyisus")</script>
+</html>

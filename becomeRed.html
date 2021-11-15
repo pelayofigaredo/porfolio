@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!--Localization-->
+<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery_i18n/jquery.i18n.js"></script>
+<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery_i18n/jquery.i18n.language.js"></script>
+<script src="jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+<!-- Bootstrap -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+<!--Concrete Localization-->
+<script src="jquery_i18n/main-jquery_i18n.js"></script>
+
+
+<!-- CSS -->
+<link href="css/default.css" rel="stylesheet">
+<link href="css/footer.css" rel="stylesheet">
+<link href="css/gamepage.css" rel="stylesheet">
+<title>Pelayo Figaredo</title>
+<link rel="icon" href="images/icon.ico">
+</head>
+<body>
+
+
+<!--Navigation bar-->
+<section>
+  <div id="nav"> </div>
+  <script>
+$(function(){
+  $("#nav").load("navBar.html #navBar");
+});
+</script> 
+</section>
+<!--end of Navigation bar-->
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center"> <img src="images/1200X400.gif" class="img-fluid" alt="Generic placeholder image"> </div>
+    </div>
+  </div>
+  <hr>
+</div>
+<section>
+    
+  <div class="container">
+    <div class="row">
+      <div id="gameText" class="col-md-6 col-12 col-lg-6">
+        <p class="gameP" data-i18n="becomeRed_p1">Become Red is a little wave FPS that I developed during a Uni course. The main gimmick is that you can alternate between first person view and a top down camera. Another cool thing is the use of a dynamic music system</p>
+        <p class="gameP" data-i18n="becomeRed_p2">I pour my heart and soul of this project during 300 hours so all the design, code and assets have been created by me from the ground up except for the music, animations, and some of the sound effects</p>
+        <p class="gameP" data-i18n="becomeRed_p3">When to game loads you be placed on a sort of hub level, there is a brief tutorial there (just follow the signs).  You'll see two portals each one takes you to a different level. In any of them you need to defeat all enemy waves. If at any point you need a reminder of the control scheme or change the configuration just press ESC to pause the game</p>
+        <p class="gameP" id="lastGameP" data-i18n="[html]becomeRed_a1">You can play it here</p>
+          
+      </div>
+      <div class="col-md-6 col-12 col-lg-6">
+          <h2 class="gameSectionH2">Screenshots</h2>
+        <div id="screenshots" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active offset-lg-0 col-lg-12"> <img class="d-block w-100" src="images/becomeRed/becomeRedScreenshot1.png" alt="First screenshot"> </div>
+            <div class="carousel-item"> <img class="d-block w-100" src="images/becomeRed/becomeRedScreenshot1.png" alt="Second screenshot"> </div>
+            <div class="carousel-item"> <img class="d-block w-100" src="images/becomeRed/becomeRedScreenshot1.png" alt="Third screenshot"> </div>
+            <div class="carousel-item"> <img class="d-block w-100" src="images/becomeRed/becomeRedScreenshot4.png" alt="Fourth screenshot"> </div>
+          </div>
+             <h2 class="gameSectionH2">Gameplay</h2>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ic_N-qdQIfA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!--Footer-->
+  <section>
+    <div id="footer"> </div>
+    <script>
+  $(function(){
+    $("#footer").load("footer.html #footer");
+  });
+  </script> 
+  </section>
+  <!--Footer-->
+
+</body>
+</html>

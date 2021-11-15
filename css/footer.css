@@ -1,0 +1,17 @@
+
+#footer{
+background-color: #DAD6D3;
+background-image: radial-gradient(circle,#f3efea,#a7a29f);
+margin-top: 50px;
+padding-bottom: 10px;
+}
+
+
+#footer a{
+  color: rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+
+.footerSection{
+  margin: 20px;
+}
