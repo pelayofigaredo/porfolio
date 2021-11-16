@@ -67,7 +67,7 @@ jQuery(document).ready(function() {
       'navBar_30': 'Estudios',
 
       'index_p1' : 'Narrativa digital.',
-      'index_p2' : 'Estudiadnte de videojuegos y amante del diseño, la música, el cine , el arte 3D y la programacíon.',
+      'index_p2' : 'Estudiante de videojuegos y amante del diseño, la música, el cine , el arte 3D y la programacíon.',
       'index_p3' : 'Creo en el poder de la nueva frontera digital interactiva para cambiar las vidas de la gente a través de experiencias únicas, trascendentales y personales.',
       'index_p4' : 'Actualmente resido en Madrid, donde curso mi último año del grado de ingeniería del videojuego en la escuela de diseño ESNE.',
       'index_p5' : 'Siempre en busca de oportunidades para aprender y crear nuevos proyectos.',
