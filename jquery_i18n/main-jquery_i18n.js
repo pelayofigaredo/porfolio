@@ -24,19 +24,19 @@ jQuery(document).ready(function() {
 
       'index_p1' : 'Digital storytelling.',
       'index_p2' : 'Video game student, and lover of design, music, cinema, 3D art and programming.',
-      'index_p3' : 'I believe in the power of the new digital and interactive frontier to change the lives of the people through unique transcendent and personal experiences.',
-      'index_p4' : 'Currently living in Madrid, studying the last year of my career in video game design and development, on the design school ESNE.',
+      'index_p3' : 'I believe in the power that the new digital and interactive frontier holds to change lives through unique transcendent and personal experiences.',
+      'index_p4' : 'Currently living in Madrid, sfinishing my last year before receiving my undergraduate degree in video game design and development, from design school ESNE.',
       'index_p5' : 'Always looking for opportunities to learn and create new projects.',
 
-      'difPlanet_p1': 'A different planet is my first game to be uploaded to the internet. It was created in my spare time during two weeks for the Beginners Circle Jam #3.',
-      'difPlanet_p2': 'All assets have been made by me from the ground up except for the music and some of the sound effects',
+      'difPlanet_p1': 'A different planet is the first game I uploaded to the internet. It took me two weeks to create in my spare time for the Beginners Circle Jam #3.',
+      'difPlanet_p2': 'All assets were made from the ground up except for the music and some of the sound effects',
       'difPlanet_p3': 'The goal of the game is to find a different planet in a galaxy filled with boredom and contempt.',
-      'difPlanet_p4': 'It plays as a plataformer in wich you must visit all the planets to open the gate to the next sector, while accounting for the gravity of the different celestial bodies.',
+      'difPlanet_p4': 'It plays as a plataformer in which you must visit all the planets to open the gate to the next sector, while accounting for the gravity of the different celestial bodies.',
       'difPlanet_a1':'You can play it <a href="https://octoyisus.itch.io/differentplanet" target="_blank"> here</a>.',
 
-      'becomeRed_p1': 'Become Red is a little wave FPS that I developed during a Uni course. The main gimmick is that you can alternate between first person view and a top down camera. Another cool thing is the use of a dynamic music system.',
-        'becomeRed_p2':'I pour my heart and soul of this project during 300 hours so all the design, code and assets have been created by me from the ground up except for the music, animations, and some of the sound effects.',
-        'becomeRed_p3':'When to game loads you be placed on a sort of hub level, there is a brief tutorial there (just follow the signs).  You\'ll see two portals each one takes you to a different level. In any of them you need to defeat all enemy waves. If at any point you need a reminder of the control scheme or change the configuration just press ESC to pause the game.',
+      'becomeRed_p1': 'Become Red is a little wave FPS that I developed during a Uni course. The main gimmick is that you can alternate between first person view and a top-down camera. Another cool element of the game is the use of a dynamic music system.',
+        'becomeRed_p2':'I poured my heart and soul into this project over the course of 300 hours. All the design, code, and assets have been created by me from the ground up except for the music, animations, and some of the sound effects.',
+        'becomeRed_p3':'When to game loads you\'re placed on a sort of hub level, there is a brief tutorial there (just follow the signs).  You\'ll see two portals each one takes you to a different level. In each of them you need to defeat all enemy waves. If at any point you need a reminder of the control scheme or change the configuration just press ESC to pause the game.',
         'becomeRed_a1':'You can play it <a href="https://octoyisus.itch.io/become-red" target="_blank"> here</a>',
 
         'everydays_h11':'Everydays',
@@ -48,16 +48,16 @@ jQuery(document).ready(function() {
         'studies_h11':'First year',
         'studies_h12':'Second year',
         'studies_h13':'Third year',
-        'studies_p1':'I\'m currently on my fourth and final year of this career. Here\'s a little something of each year to show.',
+        'studies_p1':'I\'m currently on my fourth and final year of my undergraduate degree. Here\'s a little something from each year to show for it.',
         'studies_p2':'In the first year I used Windows Forms to create an implementation of the puzzle known as nonogram created by designer Tetsuya Nishio.',
-        'studies_p3':'It includes more than 30 different nonograms of different sizes. Inside each puzzle the player must guess which of the cells are part of the drawing and which are not by using the information provided. The drawings are readed from .txt during execution. After committing a number of mistakes dependant of the size the user is forced to restart the puzzle.',
+        'studies_p3':'It includes more than 30 different nonograms of different sizes. Inside each puzzle the player must guess which of the cells are part of the drawing and which are not by using the information provided. The drawings are read from .txt during execution. After committing a number of mistakes, depending on the size of the puzzle, the user is forced to restart the puzzle.',
         'studies_p4':'You can download and check the code on <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
-        'studies_p5':'During my second year I discovered the 3D art world and thus I created a sort of walking simulator to showcase my works. Code wise it has nothing interesting, but it encompasseslot\'s of hours of learning and discovery about modeling, texturing, shading and animation.',
+        'studies_p5':'During my second year I discovered the 3D art world and thus I created a sort of walking simulator to showcase my work. Code-wise it has nothing interesting, but it encompasses many of hours of learning and discovery about modeling, texturing, shading and animation.',
         'studies_p6':'The exe can be found on <a href="https://octoyisus.itch.io/museum"  target="_blank"> Itch.io </a>',
-        'studies_p7':'My third year was a busy one. The workload was huge, but the results were pretty satisfying. It was also the year I developed <a href="becomeRed.html">Become Red</a>. Codewise it was the year of the AI. I created a bunch of projects during that course, but the most exciting two are the following, both of them use Unity and C#',
-        'studies_p8':'The first one is a simulation of hunter/prey behaviour using final state machines. The agents only can access the information picked up by their senses, and the simulation can be configured during execution. The project is available on <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
-        'studies_p9':'The second one is an ecosystem simulator. The animal behaviour is also governed by a finite state machine. It also incorporates genetic algorithms, so the creature\'s offspring inherits traits from both parents with a random variation on top. The terrain in which the simulation takes place is procedural generated using Perlin noise. The project is available on <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
-        'studies_p10':'Lastly, I wanna show an animation created as an homage/video-clip of a song from one of my favourite bands. The facial animation was done by filming myself singing with tracking dots drawn on my face, and then, tracking their movement and applying it to a 3D model of my face.'
+        'studies_p7':'My third year was a busy one. The workload was huge, but the results were pretty satisfying. It was also the year I developed <a href="becomeRed.html">Become Red</a>. Codewise it was the year of the AI. I created a bunch of projects during this course, but the most exciting two are the following, both of them use Unity and C#:',
+        'studies_p8':'The first one is a simulation of hunter/prey behavior using final state machines. The agents only can access the information picked up by their senses, and the simulation can be configured during execution. The project is available on <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
+        'studies_p9':'The second one is an ecosystem simulator. The animal behavior is also governed by a finite state machine. It also incorporates genetic algorithms, so the creature\'s offspring inherits traits from both parents with a random variation on top. The terrain in which the simulation takes place is procedural generated using Perlin noise. The project is available on <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
+        'studies_p10':'Lastly, I want to show an animation created as an homage/video-clip of a song from one of my favorite bands. The facial animation was done by filming myself singing with tracking dots drawn on my face, and then, tracking their movement and applying it to a 3D model of my face.'
         
 
       },
