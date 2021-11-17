@@ -48,7 +48,7 @@ jQuery(document).ready(function() {
         'studies_h11':'First year',
         'studies_h12':'Second year',
         'studies_h13':'Third year',
-        'studies_p1':'I\'m currently on my fourth and final year of this career, here\'s a little something of each year to show.',
+        'studies_p1':'I\'m currently on my fourth and final year of this career. Here\'s a little something of each year to show.',
         'studies_p2':'In the first year I used Windows Forms to create an implementation of the puzzle known as nonogram created by designer Tetsuya Nishio.',
         'studies_p3':'It includes more than 30 different nonograms of different sizes. Inside each puzzle the player must guess which of the cells are part of the drawing and which are not by using the information provided. The drawings are readed from .txt during execution. After committing a number of mistakes dependant of the size the user is forced to restart the puzzle.',
         'studies_p4':'You can download and check the code on <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
@@ -67,13 +67,13 @@ jQuery(document).ready(function() {
       'navBar_30': 'Estudios',
 
       'index_p1' : 'Narrativa digital.',
-      'index_p2' : 'Estudiante de videojuegos y amante del diseño, la música, el cine , el arte 3D y la programacíon.',
+      'index_p2' : 'Estudiante de videojuegos y amante del diseño, la música, el cine, el arte 3D y la programacíon.',
       'index_p3' : 'Creo en el poder de la nueva frontera digital interactiva para cambiar las vidas de la gente a través de experiencias únicas, trascendentales y personales.',
       'index_p4' : 'Actualmente resido en Madrid, donde curso mi último año del grado de ingeniería del videojuego en la escuela de diseño ESNE.',
       'index_p5' : 'Siempre en busca de oportunidades para aprender y crear nuevos proyectos.',
 
       'difPlanet_p1': 'A different planet es el primer juego que subí a internet. Lo creé como mi entrada para la Jam "Beginners Circle Jam #3".',
-      'difPlanet_p2': 'Todos los elementos han sido creados por mí desde cero excepto la música y algunos de los efectos de sonido.',
+      'difPlanet_p2': 'Todos los elementos han sido creados por mí desde cero, excepto la música y algunos de los efectos de sonido.',
       'difPlanet_p3': 'El objetivo del juego es encontrar un planeta diferente en una galaxia llena de aburrimiento y homogeneidad.',
       'difPlanet_p4': 'Mecánicamente, se juega como un plataformas en el que debes visitar todos los planetas de cada nivel para abrir una puerta al siguiente, teniendo en cuenta que tu nave se verá afectada por la gravedad de los diferentes cuerpos celestes.',
       'difPlanet_a1':'Puedes jugarlo <a href="https://octoyisus.itch.io/differentplanet" target="_blank"> aquí</a>.',
@@ -92,7 +92,7 @@ jQuery(document).ready(function() {
         'studies_h11':'Primero',
         'studies_h12':'Segundo',
         'studies_h13':'Tercero',
-        'studies_p1':'Actualmente me encuentro en mi cuarto y último año de la carrera, a continuación quiero enseñar un poco de cada año de este viaje',
+        'studies_p1':'Actualmente me encuentro en mi cuarto y último año de carrera. A continuación quiero mostrar un poco de cada año de este viaje',
         'studies_p2':'Durante mi primer año, empleé el sistema de formularios de Windows para crear una implementación del puzle conocido como nonogramas, creado por el diseñador Tetsuya Nishio.',
         'studies_p3':'Incluye más de 30 nonogramas de diferentes tamaños. Dentro de cada puzle el jugador ha de adivinar cuál de las casillas son parte del dibujo empleando la información dada. Los dibujos son leídos desde archivos .txt en tiempo de ejecución. Tras cometer un número máximo de errores, que vienen dados por el tamaño del puzle, el jugador habrá perdido y deberá reiniciar.',
         'studies_p4':'El código se puede ver y descargar desde <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
@@ -101,7 +101,7 @@ jQuery(document).ready(function() {
         'studies_p7':'En mi tercer año estuve bastante ocupado. La carga de trabajo fue enorme, pero con resultados muy satisfactorios. También fué el año en el que desarrollé  <a href="becomeRed.html">Become Red</a>. En lo referente a la programación, fue el año de la IA. Cree unos cuantos proyectos para esa asignatura, empleando Unity y C#, los dos más interesantes son los siguientes:',
         'studies_p8':'El primero es una simulación de comportamientos de cazador y presa, empleando máquinas de estado finito. Los agentes solo pueden acceder a la información obtenida mediante sus sentidos, y la simulación puede ser configurada en tiempo de ejecución. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
         'studies_p9':'El segundo es un simulador de ecosistemas. El comportamiento de los animales también está gobernado por una máquina de estados finita. También emplea algoritmos genéticos de forma que la descendencia de las criaturas hereda rasgos de ambos padres, junto con una posibilidad de mutación aleatoria. La simulación transcurre en un terreno que se genera de forma procedural empleando Ruido Perlin. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
-        'studies_p10':'Por último quiero enseñar una animación que creé como videoclip u homenaje a una canción de uno de mis grupos favoritos. La animación facial se creó mediante un proceso por el cual me filmaba a mí mismo cantando, con puntos dibujados en mi cara, para posteriormente trasladar este movimiento a un modelo 3D'
+        'studies_p10':'Por último, quiero enseñar una animación que creé como videoclip u homenaje a una canción de uno de mis grupos favoritos. La animación facial se creó mediante un proceso por el cual me filmaba a mí mismo cantando, con puntos dibujados en mi cara, para posteriormente trasladar este movimiento a un modelo 3D'
         
        
 
