@@ -23,9 +23,9 @@ jQuery(document).ready(function() {
       'navBar_30': 'Studies',
 
       'index_p1' : 'Digital storytelling.',
-      'index_p2' : 'Video game student, and lover of design, music, cinema, 3D art and programming.',
+      'index_p2' : 'Video game developer, and lover of design, music, cinema, 3D art and programming.',
       'index_p3' : 'I believe in the power that the new digital and interactive frontier holds to change lives through unique transcendent and personal experiences.',
-      'index_p4' : 'Currently living in Madrid, sfinishing my last year before receiving my undergraduate degree in video game design and development, from design school ESNE.',
+      'index_p4' : 'Currently living in Madrid, while working on VR experiences aimed at education.',
       'index_p5' : 'Always looking for opportunities to learn and create new projects.',
 
       'difPlanet_p1': 'A different planet is the first game I uploaded to the internet. It took me two weeks to create in my spare time for the Beginners Circle Jam #3.',
@@ -48,7 +48,8 @@ jQuery(document).ready(function() {
       'studies_h11':'First year',
       'studies_h12':'Second year',
       'studies_h13':'Third year',
-      'studies_p1':'I\'m currently on my fourth and final year of my undergraduate degree. Here\'s a little something from each year to show for it.',
+      'studies_h14':'Fourth year',
+      'studies_p1':'Between 2017 and 2022 I coursed a degree in video game development at ESNE.',
       'studies_p2':'In the first year I used Windows Forms to create an implementation of the puzzle known as nonogram created by designer Tetsuya Nishio.',
       'studies_p3':'It includes more than 30 different nonograms of different sizes. Inside each puzzle the player must guess which of the cells are part of the drawing and which are not by using the information provided. The drawings are read from .txt during execution. After committing a number of mistakes, depending on the size of the puzzle, the user is forced to restart the puzzle.',
       'studies_p4':'You can download and check the code on <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
@@ -57,8 +58,11 @@ jQuery(document).ready(function() {
       'studies_p7':'My third year was a busy one. The workload was huge, but the results were pretty satisfying. It was also the year I developed <a href="becomeRed.html">Become Red</a>. Codewise it was the year of the AI. I created a bunch of projects during this course, but the most exciting two are the following, both of them use Unity and C#:',
       'studies_p8':'The first one is a simulation of hunter/prey behavior using final state machines. The agents only can access the information picked up by their senses, and the simulation can be configured during execution. The project is available on <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
       'studies_p9':'The second one is an ecosystem simulator. The animal behavior is also governed by a finite state machine. It also incorporates genetic algorithms, so the creature\'s offspring inherits traits from both parents with a random variation on top. The terrain in which the simulation takes place is procedural generated using Perlin noise. The project is available on <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
-      'studies_p10':'Lastly, I want to show an animation created as an homage/video-clip of a song from one of my favorite bands. The facial animation was done by filming myself singing with tracking dots drawn on my face, and then, tracking their movement and applying it to a 3D model of my face.'
-        
+      'studies_p10':'Lastly, I want to show an animation created as an homage/video-clip of a song from one of my favorite bands. The facial animation was done by filming myself singing with tracking dots drawn on my face, and then, tracking their movement and applying it to a 3D model of my face.',
+      'studies_p11':'Unsurprisingly, this was the most intense year of them all. I chose to specialize in programming, which allowed me to get familiarised with lower level programming via c++.',
+      'studies_p12':'Due to the huge quantity of interesting projects, is best for all if I summarize them in a video format:',
+      'studies_p13':'The vast majority of this project are accessible through my <a href="https://github.com/pelayofigaredo/"  target="_blank">github</a>.'
+      
 
       },
     'es': {
@@ -67,9 +71,9 @@ jQuery(document).ready(function() {
       'navBar_30': 'Estudios',
 
       'index_p1' : 'Narrativa digital.',
-      'index_p2' : 'Estudiante de videojuegos y amante del diseño, la música, el cine, el arte 3D y la programacíon.',
+      'index_p2' : 'Desarrollador de videojuegos y amante del diseño, la música, el cine, el arte 3D y la programacíon.',
       'index_p3' : 'Creo en el poder de la nueva frontera digital interactiva para cambiar las vidas de la gente a través de experiencias únicas, trascendentales y personales.',
-      'index_p4' : 'Actualmente resido en Madrid, donde curso mi último año del grado de ingeniería del videojuego en la escuela de diseño ESNE.',
+      'index_p4' : 'Actualmente resido en Madrid, donde trabajo en la creación de experiencias VR enfocadas a la enseñanza.',
       'index_p5' : 'Siempre en busca de oportunidades para aprender y crear nuevos proyectos.',
 
       'difPlanet_p1': 'A different planet es el primer juego que subí a internet. Lo creé como mi entrada para la Jam "Beginners Circle Jam #3".',
@@ -93,16 +97,19 @@ jQuery(document).ready(function() {
       'studies_h12':'Segundo',
       'studies_h13':'Tercero',
       'studies_h14':'Cuarto',
-      'studies_p1':'Actualmente me encuentro en mi cuarto y último año de carrera. A continuación quiero mostrar un poco de cada año de este viaje',
-      'studies_p2':'Durante mi primer año, empleé el sistema de formularios de Windows para crear una implementación del puzle conocido como nonogramas, creado por el diseñador Tetsuya Nishio.',
-      'studies_p3':'Incluye más de 30 nonogramas de diferentes tamaños. Dentro de cada puzle el jugador ha de adivinar cuál de las casillas son parte del dibujo empleando la información dada. Los dibujos son leídos desde archivos .txt en tiempo de ejecución. Tras cometer un número máximo de errores, que vienen dados por el tamaño del puzle, el jugador habrá perdido y deberá reiniciar.',
-      'studies_p4':'El código se puede ver y descargar desde <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
-      'studies_p5':'Durante el segundo curso descubrí el mundo del arte 3D, con lo que creé una especie de museo virtual para exponer mis trabajos. En cuanto al código no tiene nada de particular, pero en él se ven reflejadas muchas horas de modelado, texturizado, sombreado y animación',
-      'studies_p6':'El archivo ejecutable se encuentra en  <a href="https://octoyisus.itch.io/museum"  target="_blank"> Itch.io </a>',
-      'studies_p7':'En mi tercer año estuve bastante ocupado. La carga de trabajo fue enorme, pero con resultados muy satisfactorios. También fué el año en el que desarrollé  <a href="becomeRed.html">Become Red</a>. En lo referente a la programación, fue el año de la IA. Cree unos cuantos proyectos para esa asignatura, empleando Unity y C#, los dos más interesantes son los siguientes:',
-      'studies_p8':'El primero es una simulación de comportamientos de cazador y presa, empleando máquinas de estado finito. Los agentes solo pueden acceder a la información obtenida mediante sus sentidos, y la simulación puede ser configurada en tiempo de ejecución. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
-      'studies_p9':'El segundo es un simulador de ecosistemas. El comportamiento de los animales también está gobernado por una máquina de estados finita. También emplea algoritmos genéticos de forma que la descendencia de las criaturas hereda rasgos de ambos padres, junto con una posibilidad de mutación aleatoria. La simulación transcurre en un terreno que se genera de forma procedural empleando Ruido Perlin. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
-      'studies_p10':'Por último, quiero enseñar una animación que creé como videoclip u homenaje a una canción de uno de mis grupos favoritos. La animación facial se creó mediante un proceso por el cual me filmaba a mí mismo cantando, con puntos dibujados en mi cara, para posteriormente trasladar este movimiento a un modelo 3D'
+      'studies_p1' :'Entre 2017 y 2022 cursé el grado de desarrollo de videojuegos en ESNE.',
+      'studies_p2' :'Durante mi primer año, empleé el sistema de formularios de Windows para crear una implementación del puzle conocido como nonogramas, creado por el diseñador Tetsuya Nishio.',
+      'studies_p3' :'Incluye más de 30 nonogramas de diferentes tamaños. Dentro de cada puzle el jugador ha de adivinar cuál de las casillas son parte del dibujo empleando la información dada. Los dibujos son leídos desde archivos .txt en tiempo de ejecución. Tras cometer un número máximo de errores, que vienen dados por el tamaño del puzle, el jugador habrá perdido y deberá reiniciar.',
+      'studies_p4' :'El código se puede ver y descargar desde <a href="https://github.com/pelayofigaredo/nonogramas" target="_blank">github</a>',
+      'studies_p5' :'Durante el segundo curso descubrí el mundo del arte 3D, con lo que creé una especie de museo virtual para exponer mis trabajos. En cuanto al código no tiene nada de particular, pero en él se ven reflejadas muchas horas de modelado, texturizado, sombreado y animación',
+      'studies_p6' :'El archivo ejecutable se encuentra en  <a href="https://octoyisus.itch.io/museum"  target="_blank"> Itch.io </a>',
+      'studies_p7' :'En mi tercer año estuve bastante ocupado. La carga de trabajo fue enorme, pero con resultados muy satisfactorios. También fué el año en el que desarrollé  <a href="becomeRed.html">Become Red</a>. En lo referente a la programación, fue el año de la IA. Cree unos cuantos proyectos para esa asignatura, empleando Unity y C#, los dos más interesantes son los siguientes:',
+      'studies_p8' :'El primero es una simulación de comportamientos de cazador y presa, empleando máquinas de estado finito. Los agentes solo pueden acceder a la información obtenida mediante sus sentidos, y la simulación puede ser configurada en tiempo de ejecución. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/hunterprey" target="_blank">github</a>',
+      'studies_p9' :'El segundo es un simulador de ecosistemas. El comportamiento de los animales también está gobernado por una máquina de estados finita. También emplea algoritmos genéticos de forma que la descendencia de las criaturas hereda rasgos de ambos padres, junto con una posibilidad de mutación aleatoria. La simulación transcurre en un terreno que se genera de forma procedural empleando Ruido Perlin. El proyecto está disponible en <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
+      'studies_p10':'Por último, quiero enseñar una animación que creé como videoclip u homenaje a una canción de uno de mis grupos favoritos. La animación facial se creó mediante un proceso por el cual me filmaba a mí mismo cantando, con puntos dibujados en mi cara, para posteriormente trasladar este movimiento a un modelo 3D',
+      'studies_p11':'Previsiblemente, el cuarto año fue el más intenso de la carrera. En él me especialicé en programación, familiarizándome con la programación a un nivel más bajo del que estaba acostumbrado a través de C++.',
+      'studies_p12':'Dado el gran volumen de proyectos interesantes, es más cómodo para todos presentarlos en forma de video:',
+      'studies_p13':'La mayoría de estos proyectos son accesibles en mi <a href="https://github.com/pelayofigaredo/"  target="_blank">github</a>.'
       
        
 
