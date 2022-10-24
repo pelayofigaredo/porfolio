@@ -40,7 +40,7 @@ jQuery(document).ready(function() {
       'becomeRed_a1':'You can play it <a href="https://octoyisus.itch.io/become-red" target="_blank"> here</a>',
 
       'everydays_h11':'Everydays',
-      'everydays_p1':'From January 2020 onward, daily renders, like a discount Beeple.',
+      'everydays_p1':'From January 2020 to October 2022, 1000 daily renders, like a discount Beeple.',
       'everydays_p2':'This includes modeling, texturing, material creation, some photogrametry and composition. My software of choice is mainly Blender, but also ZBrush, Photoshop, Substance Painter and Substance Designer.',
       'everydays_p3':'All of them are available on my <a href="https://www.instagram.com/octoyisus/"  target="_blank">Instagram</a>.',
 
@@ -60,7 +60,7 @@ jQuery(document).ready(function() {
       'studies_p9':'The second one is an ecosystem simulator. The animal behavior is also governed by a finite state machine. It also incorporates genetic algorithms, so the creature\'s offspring inherits traits from both parents with a random variation on top. The terrain in which the simulation takes place is procedural generated using Perlin noise. The project is available on <a href="https://github.com/pelayofigaredo/ecosystem" target="_blank">github</a>',
       'studies_p10':'Lastly, I want to show an animation created as an homage/video-clip of a song from one of my favorite bands. The facial animation was done by filming myself singing with tracking dots drawn on my face, and then, tracking their movement and applying it to a 3D model of my face.',
       'studies_p11':'Unsurprisingly, this was the most intense year of them all. I chose to specialize in programming, which allowed me to get familiarised with lower level programming via c++.',
-      'studies_p12':'Due to the huge quantity of interesting projects, is best for all if I summarize them in a video format:',
+      'studies_p12':'Due to the huge quantity of interesting projects, it would be best for all of I summarize them in a video format:',
       'studies_p13':'The vast majority of this project are accessible through my <a href="https://github.com/pelayofigaredo/"  target="_blank">github</a>.'
       
 
@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
       'becomeRed_a1':'Puedes jugarlo <a href="https://octoyisus.itch.io/become-red" target="_blank"> aquí</a>.',
 
       'everydays_h11':'Diarios',
-      'everydays_p1':'Desde enero del 2020 hasta hoy, un render diario, como un Beeple de bazar.',
+      'everydays_p1':'Desde enero del 2020 hasta octubre del 2022, 1000 render diarios, como un Beeple de bazar.',
       'everydays_p2':'Esto incluye: modelado, texturizado, creación de materiales, algo de fotogrametría y composición. En cuanto a software, principalmente uso Blender, pero también ZBrush, Photoshop, Substance Painter y Substance Designer.',
       'everydays_p3':'Todos ellos están disponibles en mi <a href="https://www.instagram.com/octoyisus/"  target="_blank">Instagram</a>.',
 
