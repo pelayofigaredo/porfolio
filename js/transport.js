@@ -1,18 +1,12 @@
-/* Transport keys on the landing deck.
-
-   The deck holds five positions: the leader (the name) and one per section.
-   << and >> seek between them — the reels kick into a burst of fast winding
-   and the label scrambles to the new track. > opens the selected track, and
-   the square returns to the leader with the reels stopped.
-
-   Reel motion is all CSS: this only sets a state class on .deck-hero and
-   lets index.css read it. */
+/* Transport keys on the landing deck: the leader plus one position per section.
+   << and >> seek, > opens the selected track, the square returns to the leader.
+   Reel motion is all CSS — this only sets a state class on .deck-hero. */
 
 (function () {
   var SEEK_MS = 650;      // how long the reels wind while seeking
   var COUNTER = ['000', '047', '118', '206', '285', '361', '432'];
 
-  /* position 0 is the leader; the rest map to these, in order */
+  /* position 0 is the leader */
   var TRACKS = [
     { title: 'A Different Planet', href: 'aDifferentPlanet.html' },
     { title: 'Become Red', href: 'becomeRed.html' },
@@ -31,7 +25,6 @@
   var seekTimer = null;
 
   function trackTitle(track) {
-    /* prefer the translated section name when there is one */
     if (track.key && window.jQuery && window.jQuery.i18n) {
       var translated = window.jQuery.i18n(track.key);
       if (translated && translated !== track.key) {
@@ -93,7 +86,6 @@
     position = (position + direction + total) % total;
     paintLabel();
 
-    /* wind the reels for a moment, then settle back to whatever was running */
     window.clearTimeout(seekTimer);
     setReels(SEEK_CLASS[direction > 0 ? 'ff' : 'rew']);
     key.classList.add('is-seeking');

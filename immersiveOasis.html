@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--JQuery-->
+<!-- jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 
-<!--Localization-->
+<!-- Localization -->
 <script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
 <script src="jquery_i18n/jquery.i18n.js"></script>
 <script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
@@ -17,7 +17,6 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-<!--Concrete Localization-->
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
@@ -29,7 +28,6 @@
 <link href="css/fonts.css" rel="stylesheet">
 <link href="css/cassette.css" rel="stylesheet">
 <link href="css/chrome.css" rel="stylesheet">
-<link href="css/immersive.css" rel="stylesheet">
 
 <title>Immersive Oasis — Pelayo Figaredo</title>
 <meta name="description" content="Serious gaming and virtual reality experiences built at Immersive Oasis, an XR studio in Asturias, Spain.">
@@ -51,20 +49,19 @@
 <meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/immersiveoasis.jpg">
 <link rel="icon" href="images/icon.ico">
 </head>
-<body>
+<body class="ink-green">
 
-<!--Navigation bar-->
+<!-- Nav -->
 <div id="nav"></div>
 <script>
 $(function () {
   $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
 </script>
-<!--end of Navigation bar-->
 
 <main class="page-wrap">
 
-  <!-- PAGE HEAD -->
+  <!-- Head -->
   <section class="deck deck--screws page-head">
     <div class="page-head__strip">
       <span class="label label--accent" data-i18n="ui_work">Work</span>
@@ -80,10 +77,10 @@ $(function () {
     <p class="page-head__sub" data-i18n="oasis_sub">I have been part of Immersive Oasis since 2021, an extended reality studio based in Asturias.</p>
   </section>
 
-  <!-- THE STUDIO -->
-  <section class="deck deck--screws oasis-block">
+  <!-- The studio -->
+  <section class="deck deck--screws stack">
     <div class="rail">
-      <span class="since">2021</span>
+      <span class="readout">2021</span>
       <h2 class="rail__title" data-i18n="oasis_h_studio">The studio</h2>
       <span class="rail__line"></span>
       <span class="label label--ghost">XR &middot; Asturias</span>
@@ -96,8 +93,8 @@ $(function () {
     </div>
   </section>
 
-  <!-- MY ROLE -->
-  <section class="deck deck--screws oasis-block">
+  <!-- My role -->
+  <section class="deck deck--screws stack">
     <div class="rail">
       <h2 class="rail__title" data-i18n="oasis_h_role">My work there</h2>
       <span class="rail__line"></span>
@@ -107,8 +104,7 @@ $(function () {
       <p data-i18n="oasis_p4">I am lead developer and CTO at the studio, and sometimes a graphics programmer too. I have worked on every project except the video-only ones.</p>
     </div>
 
-    <!-- The reel goes here. Drop in the YouTube id and delete these comment
-         markers; this is the same block the archive pages use.
+    <!-- Reel: drop in the YouTube id and uncomment.
 
     <div class="viewer bezel">
       <div class="crt">
@@ -123,14 +119,13 @@ $(function () {
 
 </main>
 
-<!--Footer-->
+<!-- Footer -->
 <div id="footer"></div>
 <script>
 $(function () {
   $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
 </script>
-<!--Footer-->
 
 </body>
 </html>

@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--JQuery-->
+<!-- jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 
-<!--Localization Lib-->
+<!-- Localization -->
 <script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
 <script src="jquery_i18n/jquery.i18n.js"></script>
 <script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
@@ -17,7 +17,6 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-<!--Concrete Localization-->
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
@@ -51,20 +50,19 @@
 <meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/home.jpg">
 <link rel="icon" href="images/icon.ico">
 </head>
-<body>
+<body class="ink-yellow">
 
-<!--Navigation bar-->
+<!-- Nav -->
 <div id="nav"></div>
 <script>
 $(function () {
   $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
 </script>
-<!--end of Navigation bar-->
 
 <main class="page-wrap">
 
-  <!-- HERO: the tape deck -->
+  <!-- Hero -->
   <section class="deck deck--screws deck-hero">
 
     <div class="deck-hero__strip">
@@ -101,7 +99,7 @@ $(function () {
 
   </section>
 
-  <!-- OPERATOR FILE -->
+  <!-- Profile -->
   <section class="file-block">
 
     <div class="bezel portrait">
@@ -133,14 +131,13 @@ $(function () {
 
 </main>
 
-<!--Footer-->
+<!-- Footer -->
 <div id="footer"></div>
 <script>
 $(function () {
   $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
 </script>
-<!--Footer-->
 
 <script src="js/nameChanger.js"></script>
 <script src="js/transport.js"></script>

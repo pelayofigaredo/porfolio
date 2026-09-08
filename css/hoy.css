@@ -1,12 +1,5 @@
-/* ============================================================================
-   HOY — the published app
-   ============================================================================ */
+/* HOY — the published app */
 
-body { --accent: var(--acc-3); }   /* app pages take the yellow ink */
-
-.app-block { margin-bottom: 2.25rem; }
-
-/* the store button sits on its own line, away from the copy */
 .get-it {
   display: flex;
   align-items: center;
@@ -16,36 +9,10 @@ body { --accent: var(--acc-3); }   /* app pages take the yellow ink */
   padding-top: 1.5rem;
   border-top: 1px dashed var(--edge);
 }
-.get-it .meta { color: var(--text-faint); }
 
-/* the app's own name, stamped like a cartridge label */
-.app-badge {
-  flex: none;
-  display: grid;
-  place-items: center;
-  padding: .1rem .8rem;
-  border: 1px solid var(--edge);
-  border-radius: var(--r-sm);
-  background: #0d0b08;
-  box-shadow: inset 0 2px 8px rgba(0, 0, 0, .9);
-  font-family: var(--font-crt);
-  font-size: 1.6rem;
-  line-height: 1.3;
-  letter-spacing: .14em;
-  color: var(--accent);
-  text-shadow: 0 0 9px var(--accent);
-}
-
-@media (max-width: 575.98px) {
-  .app-block .rail { flex-wrap: wrap; gap: .7rem; }
-  .app-block .rail__line { display: none; }
-}
-
-/* phone screenshots are tall, so give them fewer, narrower columns than the
-   landscape grids elsewhere */
+/* phone screenshots are tall: two columns or four, never an orphan three */
 .shot-grid--phone {
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  justify-content: center;
   gap: 1.25rem;
   max-width: 560px;
   margin-left: auto;

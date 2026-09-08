@@ -1,18 +1,9 @@
-/* The scrambling tape label.
+/* The scrambling tape label. Reveals the target left to right while the tail
+   churns random characters. Idles between two names unless the transport drives
+   it elsewhere. The type is scaled to fill a fixed-height box, measured once per
+   target off a hidden ruler, so a long name cannot resize the deck.
 
-   Reveals the target text left to right while the tail keeps churning random
-   characters. Left alone it alternates between the two names it was started
-   with; the transport can also drive it to any text and hand it back.
-
-   The label lives in a fixed-height box and the type is scaled to fill its
-   width, so a long section name can never make the deck taller and shove the
-   page around. The fit is measured once per target, off a hidden ruler, so it
-   holds steady while the characters churn.
-
-   window.TapeLabel
-     .start(el, nameA, nameB)  begin, idling between the two names
-     .show(text)               scramble to arbitrary text, stop idling
-     .resume()                 go back to idling between the two names
+   window.TapeLabel — .start(el, nameA, nameB) / .show(text) / .resume()
 */
 
 (function (global) {
@@ -58,8 +49,7 @@
     global.document.body.appendChild(ruler);
   }
 
-  /* size the type so the target text spans the box, capped so that short
-     names do not balloon past the height reserved for them */
+  /* fill the box width, capped so short names stay inside its height */
   function fit() {
     if (!el || !target) {
       return;

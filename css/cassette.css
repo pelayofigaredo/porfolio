@@ -1,9 +1,6 @@
-/* ============================================================================
-   CASSETTE FUTURISM — design system
-   Cream shell plastic is the chassis; dark only lives inside screens and
-   control wells. Warm amber / rust signal on top.
-   Load order: bootstrap -> fonts.css -> cassette.css -> chrome.css -> page css
-   ============================================================================ */
+/* CASSETTE FUTURISM — design system.
+   Cream shell is the chassis; dark lives only inside screens and control wells.
+   Load order: bootstrap, fonts, cassette, chrome, page. */
 
 :root {
   /* --- ground & shell plastic -------------------------------------------- */
@@ -28,7 +25,7 @@
   --acc-2:       #e0392a;   /* red    */
   --acc-3:       #f2b829;   /* yellow */
   --acc-4:       #12b2a6;   /* teal   */
-  --accent:      var(--acc-3);   /* each page overrides this */
+  --accent:      var(--acc-3);   /* each page picks one with an .ink-* class */
 
   /* --- signal ------------------------------------------------------------ */
   --amber:       #e08a1e;
@@ -74,7 +71,7 @@ body {
   overflow-x: hidden;
 }
 
-/* soft warm vignette + film grain, never intercepts clicks */
+/* vignette + grain; must never intercept clicks */
 body::before {
   content: "";
   position: fixed;
@@ -141,6 +138,11 @@ hr {
 
 ::selection { background: var(--amber); color: var(--ink); }
 
+.ink-green  { --accent: var(--acc-1); }
+.ink-red    { --accent: var(--acc-2); }
+.ink-yellow { --accent: var(--acc-3); }
+.ink-teal   { --accent: var(--acc-4); }
+
 .page-wrap {
   max-width: 1120px;
   margin: 0 auto;
@@ -165,7 +167,7 @@ hr {
   color: var(--text);
 }
 
-/* printed insert: whiter, matte, no moulding */
+/* printed insert */
 .deck--shell {
   background: linear-gradient(175deg, var(--paper) 0%, var(--paper-2) 100%);
   border-color: var(--edge);
@@ -189,7 +191,7 @@ hr {
 .deck--screws::before { left: 10px; }
 .deck--screws::after  { right: 10px; }
 
-/* --- vent grille (the recurring motif) ----------------------------------- */
+/* --- vent grille --------------------------------------------------------- */
 .vent {
   height: 22px;
   border-radius: var(--r-sm);
@@ -199,7 +201,7 @@ hr {
     transparent 3px 6px);
 }
 
-/* --- colour band: the four label inks, as on a printed sleeve ------------ */
+/* --- colour band: the four inks ------------------------------------------ */
 .stripe {
   display: block;
   height: 9px;
@@ -272,7 +274,7 @@ hr {
   50%      { opacity: .5; }
 }
 
-/* --- CRT screen: the dark heart of every device -------------------------- */
+/* --- CRT screen ---------------------------------------------------------- */
 .crt {
   position: relative;
   overflow: hidden;
@@ -305,7 +307,7 @@ hr {
   filter: saturate(.94) contrast(1.03);
 }
 
-/* --- bezel: the moulded frame around a screen ---------------------------- */
+/* --- bezel --------------------------------------------------------------- */
 .bezel {
   position: relative;
   padding: 14px 14px 34px;
@@ -382,6 +384,26 @@ hr {
 .btn-mech--amber:hover { background: linear-gradient(180deg, #ffc766, var(--amber-lit)); }
 .btn-mech--amber:active { box-shadow: 0 0 0 #9c5c0e, 0 2px 5px rgba(74, 60, 40, .35); }
 
+.readout {
+  flex: none;
+  display: grid;
+  place-items: center;
+  min-width: 62px;
+  padding: .1rem .7rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  background: #0d0b08;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, .9);
+  font-family: var(--font-crt);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  color: var(--accent);
+  text-shadow: 0 0 9px var(--accent);
+}
+
+.stack { margin-bottom: 2.25rem; }
+
 /* --- section heading rail ------------------------------------------------ */
 .rail {
   display: flex;
@@ -404,6 +426,10 @@ hr {
   border-radius: 2px;
   background: repeating-linear-gradient(90deg, var(--edge-hi) 0 3px, transparent 3px 8px);
   opacity: .75;
+}
+@media (max-width: 575.98px) {
+  .rail { flex-wrap: wrap; gap: .7rem; }
+  .rail__line { display: none; }
 }
 
 /* ============================================================================
@@ -460,7 +486,7 @@ hr {
   .split { grid-template-columns: 1fr; }
 }
 
-/* --- a framed still ------------------------------------------------------- */
+/* --- framed still -------------------------------------------------------- */
 .plate {
   position: relative;
   padding: 10px 10px 26px;
@@ -491,7 +517,7 @@ hr {
   color: var(--text-faint);
 }
 
-/* --- viewer: a screen in a bezel ----------------------------------------- */
+/* --- viewer -------------------------------------------------------------- */
 .viewer { margin: 1.75rem 0 0; }
 .viewer .embed-responsive { border-radius: var(--r-md); overflow: hidden; }
 .viewer iframe { display: block; }

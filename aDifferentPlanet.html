@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--JQuery-->
+<!-- jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 
-<!--Localization-->
+<!-- Localization -->
 <script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
 <script src="jquery_i18n/jquery.i18n.js"></script>
 <script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
@@ -17,7 +17,6 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-<!--Concrete Localization-->
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
@@ -51,33 +50,32 @@
 <meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/adifferentplanet.jpg">
 <link rel="icon" href="images/icon.ico">
 </head>
-<body>
+<body class="ink-red">
 
-<!--Navigation bar-->
+<!-- Nav -->
 <div id="nav"></div>
 <script>
 $(function () {
   $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
 </script>
-<!--end of Navigation bar-->
 
 <main class="page-wrap">
 
-  <!-- COVER SLEEVE -->
+  <!-- Sleeve -->
   <div class="bezel sleeve">
     <div class="crt">
       <img src="images/differentPlanet/differentPlanetCover.png" alt="A Different Planet">
     </div>
     <span class="stripe stripe--thin sleeve__band" aria-hidden="true"></span>
-    <div class="sleeve__chin">
-      <span class="meta">Cover &middot; A Different Planet</span>
-      <span class="meta">Beginners Circle Jam #3</span>
+    <div class="bezel__chin">
+      <span>Cover &middot; A Different Planet</span>
+      <span>Beginners Circle Jam #3</span>
     </div>
   </div>
 
-  <!-- TITLE BAR -->
-  <header class="release">
+  <!-- Title -->
+  <header class="rail release">
     <span class="led led--c2"></span>
     <h1>A Different Planet</h1>
     <span class="rail__line"></span>
@@ -86,7 +84,7 @@ $(function () {
 
   <div class="release-body">
 
-    <!-- J-CARD NOTES -->
+    <!-- Notes -->
     <section class="deck deck--shell jcard">
       <div class="jcard__head">
         <span class="label label--rust" data-i18n="ui_briefing">Briefing</span>
@@ -103,7 +101,7 @@ $(function () {
       <p class="play-line" data-i18n="[html]difPlanet_a1">You can play it <a href="https://octoyisus.itch.io/differentplanet" target="_blank"> here</a>.</p>
     </section>
 
-    <!-- SCREENS -->
+    <!-- Screens -->
     <div class="screens">
 
       <div class="viewer bezel">
@@ -146,14 +144,13 @@ $(function () {
 
 </main>
 
-<!--Footer-->
+<!-- Footer -->
 <div id="footer"></div>
 <script>
 $(function () {
   $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
 </script>
-<!--Footer-->
 
 </body>
 </html>

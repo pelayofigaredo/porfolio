@@ -1,11 +1,6 @@
-/* ============================================================================
-   CHROME — nav bar, footer, and Bootstrap 4 overrides
-   Depends on cassette.css tokens.
-   ============================================================================ */
+/* CHROME — nav bar, footer, Bootstrap 4 overrides. Uses cassette.css tokens. */
 
-/* ============================================================================
-   NAV BAR — front panel of the machine
-   ============================================================================ */
+/* --- nav bar ------------------------------------------------------------- */
 
 #navBar .navbar {
   padding: 0 1rem;
@@ -15,7 +10,6 @@
   box-shadow: 0 6px 22px rgba(74, 60, 40, .28), inset 0 1px 0 rgba(255, 255, 255, .9);
 }
 
-/* thin amber trim under the panel edge */
 #navBar .navbar::after {
   content: "";
   position: absolute;
@@ -27,7 +21,7 @@
   opacity: .8;
 }
 
-/* --- brand block: status lamp + unit code + name ------------------------- */
+/* --- brand --------------------------------------------------------------- */
 #navBar .navbar-brand {
   display: flex;
   align-items: center;
@@ -69,7 +63,7 @@
   margin-top: -2px;
 }
 
-/* --- nav links: labelled panel switches ---------------------------------- */
+/* --- nav links ----------------------------------------------------------- */
 #navBar .navbar-nav { gap: .35rem; }
 
 #navBar .nav-link {
@@ -113,7 +107,7 @@
   vertical-align: .15em;
 }
 
-/* --- dropdown: a slot of loaded tapes ------------------------------------ */
+/* --- dropdown ------------------------------------------------------------ */
 #navBar .dropdown-menu {
   margin-top: .5rem;
   padding: .4rem;
@@ -156,13 +150,12 @@
 }
 #navBar .dropdown-item:hover::before { background: var(--rust); }
 
-/* each loaded tape carries a different label ink */
 #navBar .dropdown-item:nth-child(1)::before { background: var(--acc-1); }
 #navBar .dropdown-item:nth-child(2)::before { background: var(--acc-2); }
 #navBar .dropdown-item:nth-child(3)::before { background: var(--acc-3); }
 #navBar .dropdown-item:nth-child(4)::before { background: var(--acc-4); }
 
-/* --- language switches: two physical rockers in a recessed well ---------- */
+/* --- language switches --------------------------------------------------- */
 #navBar .lang-deck {
   display: flex;
   align-items: center;
@@ -251,9 +244,7 @@
   #navBar .dropdown-menu { background: rgba(255, 255, 255, .5); box-shadow: none; }
 }
 
-/* ============================================================================
-   FOOTER — rear panel: ports and a transmit line
-   ============================================================================ */
+/* --- footer -------------------------------------------------------------- */
 
 #footer {
   position: relative;
@@ -301,7 +292,6 @@
   border-bottom-color: var(--rust-dark);
 }
 
-/* social icons as recessed panel jacks */
 #footer .ports {
   display: flex;
   align-items: center;
@@ -356,11 +346,9 @@
   #footer .footer-grid { flex-direction: column; align-items: flex-start; }
 }
 
-/* ============================================================================
-   BOOTSTRAP 4 OVERRIDES
-   ============================================================================ */
+/* --- bootstrap overrides ------------------------------------------------- */
 
-/* --- carousel: transport controls ---------------------------------------- */
+/* --- carousel controls --------------------------------------------------- */
 .carousel-control-prev,
 .carousel-control-next {
   width: 62px;
@@ -404,5 +392,4 @@
   box-shadow: none;
 }
 
-/* --- responsive embeds keep the CRT frame -------------------------------- */
 .embed-responsive iframe { border: 0; }

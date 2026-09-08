@@ -1,11 +1,6 @@
-/* ============================================================================
-   GAME PAGE — the release: cover sleeve, J-card notes, screens
-   ============================================================================ */
-
-body { --accent: var(--acc-2); }   /* this page's label ink: red */
+/* GAME PAGE — cover sleeve, J-card notes, screens */
 
 
-/* --- cover sleeve --------------------------------------------------------- */
 .sleeve {
   margin: 2.5rem 0 2.5rem;
   padding: 16px 16px 48px;
@@ -15,25 +10,8 @@ body { --accent: var(--acc-2); }   /* this page's label ink: red */
   width: 100%;
   height: auto;
 }
-.sleeve__chin {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-.sleeve__chin .meta { color: rgba(23, 19, 15, .55); }
 
-/* --- release title bar ---------------------------------------------------- */
-.release {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
+.release { margin-bottom: 2rem; }
 .release h1 {
   margin: 0;
   font-size: clamp(1.5rem, 4vw, 2.6rem);
@@ -42,7 +20,6 @@ body { --accent: var(--acc-2); }   /* this page's label ink: red */
   white-space: nowrap;
 }
 
-/* --- two column body ------------------------------------------------------ */
 .release-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -54,7 +31,6 @@ body { --accent: var(--acc-2); }   /* this page's label ink: red */
   .release-body { grid-template-columns: 1fr; }
 }
 
-/* --- J-card: the printed insert ------------------------------------------- */
 .jcard {
   position: relative;
   padding: 1.6rem 1.6rem 1.8rem;
@@ -126,7 +102,6 @@ body { --accent: var(--acc-2); }   /* this page's label ink: red */
   box-shadow: 0 0 0 #a6601d, 0 2px 6px rgba(0, 0, 0, .5);
 }
 
-/* --- screens column ------------------------------------------------------- */
 .screens .viewer:first-child { margin-top: 0; }
 .screens .carousel-item img { display: block; width: 100%; height: auto; }
 .screens .carousel-control-prev,
@@ -134,22 +109,11 @@ body { --accent: var(--acc-2); }   /* this page's label ink: red */
 
 @media (max-width: 575.98px) {
   .sleeve { padding: 10px 10px 12px; }
-  .sleeve__chin {
-    position: static;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    margin-top: .55rem;
-    flex-wrap: wrap;
-    gap: .4rem .8rem;
-  }
-  .sleeve__chin .meta { font-size: .55rem; letter-spacing: .12em; }
-  .jcard { padding: 1.2rem 1.1rem 1.4rem; }
+    .jcard { padding: 1.2rem 1.1rem 1.4rem; }
   .jcard::before { left: 14px; }
   .jcard .prose,
   .jcard__head { padding-left: .8rem; margin-left: 0; }
   .play-line { margin-left: .8rem !important; }
 }
 
-/* printed band across the bottom of the sleeve, under the artwork */
 .sleeve__band { margin-top: .6rem; }

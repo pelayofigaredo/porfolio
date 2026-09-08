@@ -1,8 +1,4 @@
-/* ============================================================================
-   EVERYDAYS — one big monitor playing back the render archive
-   ============================================================================ */
-
-body { --accent: var(--acc-4); }   /* this page's label ink: teal */
+/* EVERYDAYS — the render archive on one big monitor */
 
 
 .monitor {
@@ -10,14 +6,12 @@ body { --accent: var(--acc-4); }   /* this page's label ink: teal */
   padding: 18px 18px 40px;
 }
 
-/* the carousel lives inside the tube */
 .monitor .carousel-item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* transport controls hug the sides of the tube */
 .monitor .carousel-control-prev,
 .monitor .carousel-control-next { z-index: 20; }
 

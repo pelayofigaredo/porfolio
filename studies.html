@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--JQuery-->
+<!-- jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 
-<!--Localization-->
+<!-- Localization -->
 <script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
 <script src="jquery_i18n/jquery.i18n.js"></script>
 <script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
@@ -17,7 +17,6 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-<!--Concrete Localization-->
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
@@ -51,20 +50,19 @@
 <meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/studies.jpg">
 <link rel="icon" href="images/icon.ico">
 </head>
-<body>
+<body class="ink-green">
 
-<!--Navigation bar-->
+<!-- Nav -->
 <div id="nav"></div>
 <script>
 $(function () {
   $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
 </script>
-<!--end of Navigation bar-->
 
 <main class="page-wrap">
 
-  <!-- PAGE HEAD -->
+  <!-- Head -->
   <section class="deck deck--screws page-head">
     <div class="page-head__strip">
       <span class="label label--accent" data-i18n="ui_archive">Archive</span>
@@ -80,11 +78,11 @@ $(function () {
     <p class="page-head__sub" data-i18n="studies_p1">Between 2017 and 2022 I took a degree in video game development at ESNE.</p>
   </section>
 
-  <!-- YEAR 1 -->
-  <article class="deck deck--screws year-block">
-    <header class="year-head">
-      <span class="year-no">01</span>
-      <h2 data-i18n="studies_h11">First year</h2>
+  <!-- Year 1 -->
+  <article class="deck deck--screws stack year-block">
+    <header class="rail">
+      <span class="readout">01</span>
+      <h2 class="rail__title" data-i18n="studies_h11">First year</h2>
       <span class="rail__line"></span>
       <span class="label label--ghost">2017 / 18</span>
     </header>
@@ -111,11 +109,11 @@ $(function () {
     </div>
   </article>
 
-  <!-- YEAR 2 -->
-  <article class="deck deck--screws year-block">
-    <header class="year-head">
-      <span class="year-no">02</span>
-      <h2 data-i18n="studies_h12">Second year</h2>
+  <!-- Year 2 -->
+  <article class="deck deck--screws stack year-block">
+    <header class="rail">
+      <span class="readout">02</span>
+      <h2 class="rail__title" data-i18n="studies_h12">Second year</h2>
       <span class="rail__line"></span>
       <span class="label label--ghost">2018 / 19</span>
     </header>
@@ -133,11 +131,11 @@ $(function () {
     </div>
   </article>
 
-  <!-- YEAR 3 -->
-  <article class="deck deck--screws year-block">
-    <header class="year-head">
-      <span class="year-no">03</span>
-      <h2 data-i18n="studies_h13">Third year</h2>
+  <!-- Year 3 -->
+  <article class="deck deck--screws stack year-block">
+    <header class="rail">
+      <span class="readout">03</span>
+      <h2 class="rail__title" data-i18n="studies_h13">Third year</h2>
       <span class="rail__line"></span>
       <span class="label label--ghost">2019 / 20</span>
     </header>
@@ -183,11 +181,11 @@ $(function () {
     </div>
   </article>
 
-  <!-- YEAR 4 -->
-  <article class="deck deck--screws year-block">
-    <header class="year-head">
-      <span class="year-no">04</span>
-      <h2 data-i18n="studies_h14">Fourth year</h2>
+  <!-- Year 4 -->
+  <article class="deck deck--screws stack year-block">
+    <header class="rail">
+      <span class="readout">04</span>
+      <h2 class="rail__title" data-i18n="studies_h14">Fourth year</h2>
       <span class="rail__line"></span>
       <span class="label label--ghost">2020 / 22</span>
     </header>
@@ -213,14 +211,13 @@ $(function () {
 
 </main>
 
-<!--Footer-->
+<!-- Footer -->
 <div id="footer"></div>
 <script>
 $(function () {
   $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
 </script>
-<!--Footer-->
 
 </body>
 </html>

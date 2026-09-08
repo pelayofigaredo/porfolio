@@ -1,9 +1,4 @@
-/* ============================================================================
-   INDEX — the deck: a cassette transport as the hero, then the operator file
-   ============================================================================ */
-
-body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
-
+/* INDEX — the tape deck, then the profile */
 
 /* ============================================================================
    HERO — tape deck
@@ -22,7 +17,6 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
 .deck-hero.is-ff  { --spin: 1.1s; }
 .deck-hero.is-rew { --spin: 1.1s; --reel-dir: reverse; }
 
-/* --- top strip: labels, vent, lamps -------------------------------------- */
 .deck-hero__strip {
   display: flex;
   align-items: center;
@@ -36,7 +30,7 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
   gap: .5rem;
 }
 
-/* --- the window the tape sits in ----------------------------------------- */
+/* --- tape window --------------------------------------------------------- */
 .tape-window {
   position: relative;
   display: grid;
@@ -54,7 +48,6 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
     0 1px 0 rgba(255, 255, 255, .65);
   overflow: hidden;
 }
-/* glass highlight across the window */
 .tape-window::after {
   content: "";
   position: absolute;
@@ -63,7 +56,7 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
   background: linear-gradient(115deg, rgba(255, 235, 200, .07) 0 32%, transparent 46%);
 }
 
-/* --- the tape itself: a J-card label with two reels ---------------------- */
+/* --- the tape ------------------------------------------------------------ */
 .tape {
   position: relative;
   display: grid;
@@ -78,7 +71,6 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
     inset 0 -4px 10px rgba(138, 118, 88, .25),
     0 10px 30px rgba(0, 0, 0, .55);
 }
-/* the two ruled lines of a real cassette label */
 .tape::before {
   content: "";
   position: absolute;
@@ -125,7 +117,6 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* --- tape label text ----------------------------------------------------- */
 .tape__label { min-width: 0; text-align: center; }
 
 /* Fixed box, scaling type: the title never changes the deck's height, so
@@ -234,9 +225,7 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
   .transport__key { width: 36px; }
 }
 
-/* ============================================================================
-   OPERATOR FILE — the portrait on screen + logged lines
-   ============================================================================ */
+/* --- portrait and profile ------------------------------------------------ */
 
 .file-block {
   display: grid;
@@ -246,11 +235,9 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
   margin-bottom: 4rem;
 }
 
-/* --- portrait: same bezel as the rest of the screens, raster off --------- */
 .portrait { padding: 12px 12px 32px; }
 .portrait .crt img { filter: contrast(1.05); }   /* the photo is already monochrome */
 
-/* --- log lines ----------------------------------------------------------- */
 .log {
   counter-reset: logline;
   padding: 0;

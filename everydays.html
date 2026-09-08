@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--JQuery-->
+<!-- jQuery -->
 <script src="js/jquery-3.4.1.min.js"></script>
 
-<!--Localization-->
+<!-- Localization -->
 <script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
 <script src="jquery_i18n/jquery.i18n.js"></script>
 <script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
@@ -17,7 +17,6 @@
 <script src="jquery_i18n/jquery.i18n.parser.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.js"></script>
 <script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
-<!--Concrete Localization-->
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
@@ -51,20 +50,19 @@
 <meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/everydays.jpg">
 <link rel="icon" href="images/icon.ico">
 </head>
-<body>
+<body class="ink-teal">
 
-<!--Navigation bar-->
+<!-- Nav -->
 <div id="nav"></div>
 <script>
 $(function () {
   $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
 </script>
-<!--end of Navigation bar-->
 
 <main class="page-wrap">
 
-  <!-- PAGE HEAD -->
+  <!-- Head -->
   <section class="deck deck--screws page-head">
     <div class="page-head__strip">
       <span class="label label--accent" data-i18n="ui_gallery">Gallery</span>
@@ -80,7 +78,7 @@ $(function () {
     <p class="page-head__sub" data-i18n="everydays_p1">From January 2020 to October 2022, one render a day for 1000 days.</p>
   </section>
 
-  <!-- THE MONITOR -->
+  <!-- Monitor -->
   <div class="bezel monitor">
     <div class="crt">
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -116,22 +114,21 @@ $(function () {
     </div>
   </div>
 
-  <!-- NOTES -->
-  <section class="deck deck--screws prose" style="margin-bottom: 3rem;">
+  <!-- Notes -->
+  <section class="deck deck--screws prose stack">
     <p data-i18n="everydays_p2">This includes modeling, texturing, material creation, some photogrammetry and composition. My software of choice is mainly Blender, but also ZBrush, Photoshop, Substance Painter and Substance Designer.</p>
     <p data-i18n="[html]everydays_p3">All of them are available on my <a href="https://www.instagram.com/octoyisus/"  target="_blank">Instagram</a>.</p>
   </section>
 
 </main>
 
-<!--Footer-->
+<!-- Footer -->
 <div id="footer"></div>
 <script>
 $(function () {
   $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
 </script>
-<!--Footer-->
 
 </body>
 </html>
