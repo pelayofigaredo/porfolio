@@ -345,6 +345,43 @@ hr {
   }
 }
 
+/* --- mechanical button --------------------------------------------------- */
+.btn-mech {
+  display: inline-flex;
+  align-items: center;
+  gap: .6em;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  padding: .8em 1.4em;
+  border: 1px solid var(--edge-hi);
+  border-radius: var(--r-sm);
+  background: linear-gradient(180deg, var(--panel-hi), var(--panel-lo));
+  box-shadow: 0 3px 0 var(--edge-hi), 0 5px 10px rgba(74, 60, 40, .3);
+  transition: transform .08s, box-shadow .08s, background .15s;
+  cursor: pointer;
+}
+.btn-mech:hover,
+.btn-mech:focus-visible {
+  color: var(--ink);
+  background: linear-gradient(180deg, #fffaf0, var(--panel));
+  text-decoration: none;
+}
+.btn-mech:active {
+  transform: translateY(3px);
+  box-shadow: 0 0 0 var(--edge-hi), 0 2px 5px rgba(74, 60, 40, .35);
+}
+.btn-mech--amber {
+  background: linear-gradient(180deg, var(--amber-lit), var(--amber));
+  border-color: #9c5c0e;
+  box-shadow: 0 3px 0 #9c5c0e, 0 5px 14px rgba(224, 138, 30, .35);
+}
+.btn-mech--amber:hover { background: linear-gradient(180deg, #ffc766, var(--amber-lit)); }
+.btn-mech--amber:active { box-shadow: 0 0 0 #9c5c0e, 0 2px 5px rgba(74, 60, 40, .35); }
+
 /* --- section heading rail ------------------------------------------------ */
 .rail {
   display: flex;

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!--Localization-->
+<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery_i18n/jquery.i18n.js"></script>
+<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery_i18n/jquery.i18n.language.js"></script>
+<script src="jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+<!--Concrete Localization-->
+<script src="jquery_i18n/main-jquery_i18n.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+<!-- CSS -->
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/cassette.css" rel="stylesheet">
+<link href="css/chrome.css" rel="stylesheet">
+<link href="css/hoy.css" rel="stylesheet">
+
+<title>Hoy — Offline personal diary for Android · Pelayo Figaredo</title>
+<meta name="description" content="Hoy is a free personal diary for Android: no account, no ads, no internet. Entries, tags, epochs and your own metrics, all stored on your device.">
+<link rel="canonical" href="https://www.pelayofigaredo.com/hoy.html">
+
+<!-- Social cards -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pelayo Figaredo">
+<meta property="og:title" content="Hoy — Offline personal diary for Android · Pelayo Figaredo">
+<meta property="og:description" content="Hoy is a free personal diary for Android: no account, no ads, no internet. Entries, tags, epochs and your own metrics, all stored on your device.">
+<meta property="og:url" content="https://www.pelayofigaredo.com/hoy.html">
+<meta property="og:image" content="https://www.pelayofigaredo.com/images/og/hoy.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hoy — Offline personal diary for Android">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hoy — Offline personal diary for Android · Pelayo Figaredo">
+<meta name="twitter:description" content="Hoy is a free personal diary for Android: no account, no ads, no internet. Entries, tags, epochs and your own metrics, all stored on your device.">
+<meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/hoy.jpg">
+<link rel="icon" href="images/icon.ico">
+</head>
+<body>
+
+<!--Navigation bar-->
+<div id="nav"></div>
+<script>
+$(function () {
+  $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
+});
+</script>
+<!--end of Navigation bar-->
+
+<main class="page-wrap">
+
+  <!-- PAGE HEAD -->
+  <section class="deck deck--screws page-head">
+    <div class="page-head__strip">
+      <span class="label label--accent" data-i18n="ui_app">App</span>
+      <span class="stripe" aria-hidden="true"></span>
+      <span class="page-head__lamps">
+        <span class="led led--c1"></span>
+        <span class="led led--c2"></span>
+        <span class="led led--c3"></span>
+        <span class="led led--c4"></span>
+      </span>
+    </div>
+    <h1>Hoy</h1>
+    <p class="page-head__sub" data-i18n="hoy_sub">Hoy is a personal diary for writing without distractions and without handing your data to anyone.</p>
+  </section>
+
+  <!-- THE APP -->
+  <section class="deck deck--screws app-block">
+    <div class="rail">
+      <span class="app-badge">HOY</span>
+      <h2 class="rail__title" data-i18n="hoy_h_what">How it works</h2>
+      <span class="rail__line"></span>
+      <span class="label label--ghost">Android</span>
+    </div>
+
+    <div class="prose">
+      <p data-i18n="hoy_p1">Everything you write stays on your own device. No sign-up, no subscription, no internet connection. There is no server to send anything to, no account to create and no advertising, and there is no paid tier holding features back.</p>
+      <p data-i18n="hoy_p2">Each entry takes free text, an optional title and a photo, and you move between days with a gesture. Entries are organised with your own colour-coded tags, and with epochs — the long stretches of a life: a new job, a long trip, a period of change.</p>
+      <p data-i18n="hoy_p3">You can also define your own metrics, whatever you care to track: weight, hours of sleep, mood, kilometres walked. The app records them alongside each entry and charts how they move over the months.</p>
+      <p data-i18n="hoy_p4">Backups export as a ZIP whenever you want, and the diary can also come out as a PDF.</p>
+    </div>
+
+    <div class="get-it">
+      <a class="btn-mech btn-mech--amber" href="https://play.google.com/store/apps/details?id=com.octoyisus.hoy" target="_blank" rel="noopener" data-i18n="hoy_cta">Get it on Google Play</a>
+      <span class="meta">Free &middot; PEGI 3</span>
+    </div>
+
+    <div class="shot-grid shot-grid--phone">
+      <div class="shot"><img src="images/hoy/hoy-entry.jpg" alt="Hoy — calendar and a day's entry with its metrics"></div>
+      <div class="shot"><img src="images/hoy/hoy-tags.jpg" alt="Hoy — entries organised by tags and epochs"></div>
+      <div class="shot"><img src="images/hoy/hoy-epochs.jpg" alt="Hoy — epochs mapped across the year"></div>
+      <div class="shot"><img src="images/hoy/hoy-metrics.jpg" alt="Hoy — personal metrics charted over time"></div>
+    </div>
+  </section>
+
+</main>
+
+<!--Footer-->
+<div id="footer"></div>
+<script>
+$(function () {
+  $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
+});
+</script>
+<!--Footer-->
+
+</body>
+</html>

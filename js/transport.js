@@ -10,12 +10,13 @@
 
 (function () {
   var SEEK_MS = 650;      // how long the reels wind while seeking
-  var COUNTER = ['000', '047', '118', '206', '285', '361'];
+  var COUNTER = ['000', '047', '118', '206', '285', '361', '432'];
 
   /* position 0 is the leader; the rest map to these, in order */
   var TRACKS = [
     { title: 'A Different Planet', href: 'aDifferentPlanet.html' },
     { title: 'Become Red', href: 'becomeRed.html' },
+    { title: 'Hoy', href: 'hoy.html' },
     { key: 'navBar_21', title: 'Everydays', href: 'everydays.html' },
     { key: 'navBar_30', title: 'Studies', href: 'studies.html' },
     { title: 'Immersive Oasis', href: 'immersiveOasis.html' }
