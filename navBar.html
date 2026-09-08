@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+<meta charset="utf-8">
+<!-- This document is only ever consumed as the #navBar fragment (jQuery .load),
+     so it carries no scripts or styles of its own. -->
+<title>navBar</title>
+</head>
+<body>
 
-<!--JQuery-->
-<script src="js/jquery-3.4.1.min.js"></script>
+<div id="navBar">
+  <nav class="navbar fixed-top navbar-expand-lg" aria-label="Main">
 
-<!--Localization-->
-<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
-<script src="jquery_i18n/jquery.i18n.js"></script>
-<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
-<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
-<script src="jquery_i18n/jquery.i18n.language.js"></script>
-<script src="jquery_i18n/jquery.i18n.parser.js"></script>
-<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
-<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <a class="navbar-brand" id="navBarTitleLink" href="index.html">
+      <span class="brand-lamp" aria-hidden="true"></span>
+      <span>
+        <span class="brand-name" id="navBarTitle">Pelayo Figaredo</span>
+        <span class="brand-unit">Portfolio unit &middot; 01</span>
+      </span>
+    </a>
 
+    <div class="lang-deck order-lg-3 ml-auto mr-2">
+      <a href="#" class="lang-switch" data-locale="en" aria-label="English"><img src="images/en.png" alt="EN"></a>
+      <a href="#" class="lang-switch" data-locale="es" aria-label="Español"><img src="images/es.png" alt="ES"></a>
+    </div>
 
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script> 
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-
-<!--Concrete Localization-->
-<script src="jquery_i18n/main-jquery_i18n.js"></script>
-
-  </head>
-  <body>
-	<div id="navBar">
-	 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" id="navBarTitle" href="index.html">Pelayo Figaredo</a>
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler order-lg-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-i18n="navBar_10" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GameDev</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownGameDev">
-              <a class="dropdown-item" href="aDifferentPlanet.html">A Different Planet</a>
-			  <a class="dropdown-item" href="becomeRed.html">Become Red</a>
-            </div>
-          </li>
-		  <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3D" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">3D</a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="everydays.html" data-i18n="navBar_21">Everydays</a>
-            </div>
-          </li>
-          <li>
-            <a class="nav-link" href="studies.html" data-i18n="navBar_30">Studies</a>
-          </li>
-           
+    </button>
 
-        </ul>
-      </div>
-      <a href="#" class= "lang-switch" data-locale="en"><img src="images/en.png" style="width:50px;height:50px;"></a> |
-      <a href="#" class="lang-switch" data-locale="es"><img src="images/es.png" style="width:50px;height:50px;"></a>
-    </nav>
-	</div>
+    <div class="collapse navbar-collapse order-lg-2" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-i18n="navBar_10" href="#" id="navbarDropdownGameDev" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">GameDev</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownGameDev">
+            <a class="dropdown-item" href="aDifferentPlanet.html">A Different Planet</a>
+            <a class="dropdown-item" href="becomeRed.html">Become Red</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3D" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">3D</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown3D">
+            <a class="dropdown-item" href="everydays.html" data-i18n="navBar_21">Everydays</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="studies.html" data-i18n="navBar_30">Studies</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+</div>
+
 </body>
-<script src="js/nameChanger.js"></script>
-<script>startChange($("navbar-brand#navBarTitle"))</script>
-    
 </html>

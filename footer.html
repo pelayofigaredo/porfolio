@@ -1,57 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+<meta charset="utf-8">
+<!-- This document is only ever consumed as the #footer fragment (jQuery .load),
+     so it carries no scripts or styles of its own. -->
+<title>footer</title>
+</head>
+<body>
 
-<!--JQuery-->
-<script src="js/jquery-3.4.1.min.js"></script>
+<div id="footer">
+  <div class="page-wrap">
 
-<!--Localization-->
-<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
-<script src="jquery_i18n/jquery.i18n.js"></script>
-<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
-<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
-<script src="jquery_i18n/jquery.i18n.language.js"></script>
-<script src="jquery_i18n/jquery.i18n.parser.js"></script>
-<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
-<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <div class="footer-grid">
 
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script> 
-<!-- Bootstrap -->
-<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-
-<!--Concrete Localization-->
-<script src="jquery_i18n/main-jquery_i18n.js"></script>
-
-
-
-<!-- CSS -->
-<link href="css/footer.css" rel="stylesheet">
-
-  </head>
-  <body>
-    <div id="footer">
-    <div class="section">
-      <div class="container">
-        <div id="footerRow" class="row">
-          <div class="col-12 text-center">
-            <a href = "mailto: pelayofigaredo@gmail.com">pelayofigaredo@gmail.com</a>
-          </div>
-        </div>
-          <div class="footerSection">
-          <div id="footerRow" class="row">
-          <div class="col-12 text-center">
-                <a  href="https://www.instagram.com/octoyisus/" target="_blank"><img src="images/snIcons/instagram.png" style="width: 33px;"></img></a>
-                <a  href="https://octoyisus.itch.io/" target="_blank"><img src="images/snIcons/itch.png" style="width: 33px;"></img></a>
-                <a  href="https://github.com/pelayofigaredo/" target="_blank"><img src="images/snIcons/github.png" style="width: 33px;"></img></a>
-                <a  href="https://www.linkedin.com/in/pelayo-figaredo-garc%C3%ADa-623b76220" target="_blank"><img src="images/snIcons/linkedin.png" style="width: 33px;"></img></a>
-          </div>
-        </div>
-        </div>
+      <div class="transmit">
+        <span class="label label--amber" data-i18n="ui_contact">Contact</span>
+        <a href="mailto:pelayofigaredo@gmail.com">pelayofigaredo@gmail.com</a>
       </div>
+
+      <div class="ports">
+        <a class="port" href="https://www.instagram.com/octoyisus/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/snIcons/instagram.png" alt="Instagram"></a>
+        <a class="port" href="https://octoyisus.itch.io/" target="_blank" rel="noopener" aria-label="itch.io"><img src="images/snIcons/itch.png" alt="itch.io"></a>
+        <a class="port" href="https://github.com/pelayofigaredo/" target="_blank" rel="noopener" aria-label="GitHub"><img src="images/snIcons/github.png" alt="GitHub"></a>
+        <a class="port" href="https://www.linkedin.com/in/pelayo-figaredo-garc%C3%ADa-623b76220" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="images/snIcons/linkedin.png" alt="LinkedIn"></a>
+      </div>
+
     </div>
+
+    <div class="footer-legal">
+      <span class="meta">Pelayo Figaredo &middot; Octoyisus</span>
+      <span class="meta">Rec. in Madrid &middot; End of tape</span>
     </div>
-</body>   
+
+  </div>
+</div>
+
+</body>
 </html>

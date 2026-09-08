@@ -1,0 +1,408 @@
+/* ============================================================================
+   CHROME — nav bar, footer, and Bootstrap 4 overrides
+   Depends on cassette.css tokens.
+   ============================================================================ */
+
+/* ============================================================================
+   NAV BAR — front panel of the machine
+   ============================================================================ */
+
+#navBar .navbar {
+  padding: 0 1rem;
+  min-height: 74px;
+  background: linear-gradient(180deg, var(--panel-hi) 0%, var(--panel) 62%, var(--panel-lo) 100%) !important;
+  border-bottom: 1px solid var(--edge-hi);
+  box-shadow: 0 6px 22px rgba(74, 60, 40, .28), inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+
+/* thin amber trim under the panel edge */
+#navBar .navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--amber) 18%, var(--amber) 82%, transparent);
+  opacity: .8;
+}
+
+/* --- brand block: status lamp + unit code + name ------------------------- */
+#navBar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .55rem 0;
+  margin-right: 2rem;
+  border-bottom: 0;
+  background: none !important;
+}
+#navBar .navbar-brand:hover { background: none !important; }
+
+#navBar .brand-lamp {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--amber-lit);
+  box-shadow: 0 0 0 1px rgba(120, 60, 0, .4), 0 0 8px var(--amber), 0 0 18px rgba(224, 138, 30, .5);
+  animation: pulse 2.6s ease-in-out infinite;
+  flex: none;
+}
+
+#navBar .brand-name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+#navBar .brand-unit {
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  display: block;
+  margin-top: -2px;
+}
+
+/* --- nav links: labelled panel switches ---------------------------------- */
+#navBar .navbar-nav { gap: .35rem; }
+
+#navBar .nav-link {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text-dim) !important;
+  padding: .75rem 1rem !important;
+  border: 1px solid transparent;
+  border-radius: var(--r-sm);
+  background: none;
+  transition: color .15s, background .15s, border-color .15s;
+}
+#navBar .nav-link::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background: var(--rust);
+  transition: width .18s ease;
+}
+#navBar .nav-link:hover,
+#navBar .nav-link:focus,
+#navBar .nav-item.show > .nav-link {
+  color: var(--ink) !important;
+  background: rgba(179, 64, 14, .08);
+  border-color: var(--edge);
+}
+#navBar .nav-link:hover::before,
+#navBar .nav-item.show > .nav-link::before { width: 26px; }
+
+#navBar .dropdown-toggle::after {
+  margin-left: .6em;
+  border-top-color: var(--rust);
+  vertical-align: .15em;
+}
+
+/* --- dropdown: a slot of loaded tapes ------------------------------------ */
+#navBar .dropdown-menu {
+  margin-top: .5rem;
+  padding: .4rem;
+  min-width: 15rem;
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+  border: 1px solid var(--edge);
+  border-radius: var(--r-md);
+  box-shadow: 0 14px 32px rgba(74, 60, 40, .35), inset 0 1px 0 rgba(255, 255, 255, .9);
+}
+#navBar .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: .7rem .85rem;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: var(--r-sm);
+  background: none;
+  transition: color .15s, background .15s, border-color .15s;
+}
+#navBar .dropdown-item::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--edge);
+  flex: none;
+  transition: background .15s;
+}
+#navBar .dropdown-item:hover,
+#navBar .dropdown-item:focus {
+  color: var(--ink);
+  background: rgba(179, 64, 14, .09);
+  border-left-color: var(--rust);
+}
+#navBar .dropdown-item:hover::before { background: var(--rust); }
+
+/* each loaded tape carries a different label ink */
+#navBar .dropdown-item:nth-child(1)::before { background: var(--acc-1); }
+#navBar .dropdown-item:nth-child(2)::before { background: var(--acc-2); }
+#navBar .dropdown-item:nth-child(3)::before { background: var(--acc-3); }
+#navBar .dropdown-item:nth-child(4)::before { background: var(--acc-4); }
+
+/* --- language switches: two physical rockers in a recessed well ---------- */
+#navBar .lang-deck {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .3rem .5rem;
+  border: 1px solid var(--edge-hi);
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, #c2b59a, var(--panel-lo));
+  box-shadow: inset 0 2px 5px rgba(109, 92, 67, .55), 0 1px 0 rgba(255, 255, 255, .7);
+}
+#navBar .lang-switch {
+  display: block;
+  padding: 3px;
+  border: 1px solid var(--edge-hi);
+  border-radius: var(--r-sm);
+  background: linear-gradient(180deg, var(--panel-hi), var(--panel-lo));
+  box-shadow: 0 2px 0 var(--edge-hi);
+  filter: saturate(.7) brightness(.97);
+  transition: filter .15s, transform .08s, box-shadow .1s, border-color .15s;
+}
+#navBar .lang-switch img {
+  display: block;
+  width: 26px !important;
+  height: 26px !important;
+  border-radius: 2px;
+}
+#navBar .lang-switch:hover {
+  filter: saturate(1.05) brightness(1.03);
+  border-color: var(--rust);
+  background: linear-gradient(180deg, #fffaf0, var(--panel));
+}
+#navBar .lang-switch:active {
+  transform: translateY(2px);
+  box-shadow: 0 0 0 var(--edge-hi);
+}
+
+/* --- toggler ------------------------------------------------------------- */
+#navBar .navbar-toggler {
+  border: 1px solid var(--edge-hi);
+  border-radius: var(--r-sm);
+  padding: .5rem .7rem;
+  background: linear-gradient(180deg, var(--panel-hi), var(--panel-lo));
+  box-shadow: 0 3px 0 var(--edge-hi);
+}
+#navBar .navbar-toggler:active { transform: translateY(3px); box-shadow: none; }
+#navBar .navbar-toggler-icon {
+  background-image: none;
+  position: relative;
+  width: 20px;
+  height: 14px;
+}
+#navBar .navbar-toggler-icon,
+#navBar .navbar-toggler-icon::before,
+#navBar .navbar-toggler-icon::after {
+  border-top: 3px solid var(--ink);
+}
+#navBar .navbar-toggler-icon::before,
+#navBar .navbar-toggler-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+#navBar .navbar-toggler-icon::before { top: 4px; }
+#navBar .navbar-toggler-icon::after  { top: 11px; }
+
+@media (max-width: 575.98px) {
+  body { padding-top: 64px; }
+  #navBar .navbar { min-height: 64px; padding: 0 .7rem; }
+  #navBar .navbar-brand { gap: .55rem; margin-right: .6rem; }
+  #navBar .brand-name { font-size: .8rem; letter-spacing: .08em; }
+  #navBar .brand-unit { display: none; }
+  #navBar .lang-deck { gap: .35rem; padding: .25rem .35rem; }
+  #navBar .lang-switch img { width: 20px !important; height: 20px !important; }
+  #navBar .navbar-toggler { padding: .4rem .55rem; }
+}
+
+@media (max-width: 991.98px) {
+  #navBar .navbar { padding-bottom: .6rem; }
+  #navBar .navbar-collapse {
+    margin-top: .6rem;
+    padding-top: .6rem;
+    border-top: 1px solid var(--edge);
+  }
+  #navBar .navbar-nav { gap: 0; }
+  #navBar .dropdown-menu { background: rgba(255, 255, 255, .5); box-shadow: none; }
+}
+
+/* ============================================================================
+   FOOTER — rear panel: ports and a transmit line
+   ============================================================================ */
+
+#footer {
+  position: relative;
+  margin-top: 5rem;
+  padding: 0 0 2rem;
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-lo) 100%);
+  border-top: 1px solid var(--edge-hi);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .8);
+}
+#footer::before {
+  content: "";
+  display: block;
+  height: 26px;
+  background: repeating-linear-gradient(180deg,
+    rgba(109, 92, 67, .42) 0 2px,
+    rgba(255, 255, 255, .7) 2px 3px,
+    transparent 3px 6px);
+  border-bottom: 1px solid var(--edge);
+}
+
+#footer .footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 2rem 0 .5rem;
+}
+
+#footer .transmit {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+#footer .transmit a {
+  font-family: var(--font-crt);
+  font-size: 1.55rem;
+  color: var(--rust);
+  border-bottom: 1px solid rgba(179, 64, 14, .35);
+  letter-spacing: .02em;
+}
+#footer .transmit a:hover {
+  color: var(--rust-dark);
+  background: none;
+  border-bottom-color: var(--rust-dark);
+}
+
+/* social icons as recessed panel jacks */
+#footer .ports {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+/* The source PNGs are an opaque black disc with the glyph knocked out as
+   transparency. So the disc colour comes from inverting the black, and the
+   glyph colour comes from whatever sits behind the image. */
+#footer .port {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--edge-hi);
+  border-radius: 50%;
+  background: var(--ink);
+  box-shadow: 0 2px 0 var(--edge-hi), 0 5px 12px rgba(74, 60, 40, .25);
+  transition: background .15s, border-color .15s, box-shadow .15s, transform .1s;
+}
+#footer .port img {
+  display: block;
+  width: 100% !important;
+  height: 100%;
+  filter: invert(1) brightness(.96) sepia(.5) saturate(.8);
+}
+/* hover recolours the glyph, since that is the see-through part */
+#footer .port:nth-child(1):hover { background: var(--acc-2); }
+#footer .port:nth-child(2):hover { background: var(--acc-3); }
+#footer .port:nth-child(3):hover { background: var(--acc-1); }
+#footer .port:nth-child(4):hover { background: var(--acc-4); }
+#footer .port:hover {
+  border-color: var(--edge-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 0 var(--edge-dark), 0 7px 16px rgba(74, 60, 40, .35);
+}
+#footer .port:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 0 var(--edge-dark), 0 2px 6px rgba(74, 60, 40, .3);
+}
+
+#footer .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--edge);
+}
+
+@media (max-width: 575.98px) {
+  #footer .footer-grid { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================================
+   BOOTSTRAP 4 OVERRIDES
+   ============================================================================ */
+
+/* --- carousel: transport controls ---------------------------------------- */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 62px;
+  opacity: 1;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 40px;
+  height: 40px;
+  background-image: none;
+  border: 1px solid var(--edge-hi);
+  border-radius: var(--r-sm);
+  background: linear-gradient(180deg, var(--panel-hi), var(--panel-lo));
+  box-shadow: 0 3px 0 var(--edge-hi), 0 5px 12px rgba(0, 0, 0, .45);
+  position: relative;
+  transition: transform .08s, box-shadow .08s, background .15s;
+}
+/* triangles drawn with borders — no icon fonts */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+}
+.carousel-control-prev-icon::after { border-right: 11px solid var(--ink); margin-left: -2px; }
+.carousel-control-next-icon::after { border-left: 11px solid var(--ink); margin-left: 2px; }
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background: linear-gradient(180deg, var(--amber-lit), var(--amber));
+  border-color: #9c5c0e;
+  box-shadow: 0 3px 0 #9c5c0e, 0 0 18px rgba(224, 138, 30, .5);
+}
+.carousel-control-prev:active .carousel-control-prev-icon,
+.carousel-control-next:active .carousel-control-next-icon {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* --- responsive embeds keep the CRT frame -------------------------------- */
+.embed-responsive iframe { border: 0; }

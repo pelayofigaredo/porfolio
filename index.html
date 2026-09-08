@@ -21,14 +21,14 @@
 <script src="jquery_i18n/main-jquery_i18n.js"></script>
 
 <!-- Bootstrap -->
-<script src="js/popper.min.js"></script> 
-<script src="js/bootstrap-4.4.1.js"></script> 
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 
-
 <!-- CSS -->
-<link href="css/default.css" rel="stylesheet">
-<link href="css/footer.css" rel="stylesheet">
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/cassette.css" rel="stylesheet">
+<link href="css/chrome.css" rel="stylesheet">
 <link href="css/index.css" rel="stylesheet">
 
 <title>Pelayo Figaredo</title>
@@ -37,62 +37,96 @@
 <body>
 
 <!--Navigation bar-->
-<section>
-  <div id="nav"> </div>
-  <script>
-$(function(){
-  $("#nav").load("navBar.html #navBar");
+<div id="nav"></div>
+<script>
+$(function () {
+  $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
 });
-</script> 
-</section>
+</script>
 <!--end of Navigation bar-->
 
-<section>
-  <div class="bigContainer">
-  <div class="jumbotron text-center mt-2">
-    <div class="container">
-   
-      <div class="row">
-        <div class="col-12">
+<main class="page-wrap">
+
+  <!-- HERO: the tape deck -->
+  <section class="deck deck--screws deck-hero">
+
+    <div class="deck-hero__strip">
+      <span class="label label--amber">Side A</span>
+      <span class="vent"></span>
+      <span class="deck-hero__lamps">
+        <span class="led led--c1"></span>
+        <span class="led led--c2"></span>
+        <span class="led led--c3"></span>
+        <span class="led led--c4"></span>
+      </span>
+    </div>
+
+    <div class="tape-window">
+      <div class="tape">
+        <span class="reel" aria-hidden="true"></span>
+        <div class="tape__label">
+          <span class="tape__side">Portfolio &nbsp;/&nbsp; 90 min &nbsp;/&nbsp; Type IV</span>
           <h1 id="name">Pelayo Figaredo</h1>
-          <p data-i18n="index_p1">Digital storytelling.</p>
+          <p class="tape__tagline" data-i18n="index_p1">Digital storytelling.</p>
+          <span class="stripe" aria-hidden="true"></span>
         </div>
+        <span class="reel" aria-hidden="true"></span>
       </div>
     </div>
-    </div>
-  </div>
-</section>
 
-<section>
-  <div class="container" id="clearBG">
-    <div class="row">
-      <div class="col-md-4">
-        <div class="imgAbt">
-          <img  width="360" src="images/frontpage.png" class="rounded mx-auto d-block">
-        </div>
+    <div class="transport" role="group" data-i18n="[aria-label]ui_transport" aria-label="Tape transport">
+      <button type="button" class="transport__key" data-transport="rew" data-i18n="[aria-label]ui_rew" aria-label="Rewind" aria-pressed="false"><span aria-hidden="true">&#9664;&#9664;</span></button>
+      <button type="button" class="transport__key" data-transport="play" data-i18n="[aria-label]ui_play" aria-label="Play" aria-pressed="true"><span aria-hidden="true">&#9654;</span></button>
+      <button type="button" class="transport__key" data-transport="ff" data-i18n="[aria-label]ui_ff" aria-label="Fast forward" aria-pressed="false"><span aria-hidden="true">&#9654;&#9654;</span></button>
+      <button type="button" class="transport__key" data-transport="stop" data-i18n="[aria-label]ui_stop" aria-label="Stop" aria-pressed="false"><span aria-hidden="true">&#9632;</span></button>
+      <span class="transport__counter">000</span>
+    </div>
+
+  </section>
+
+  <!-- OPERATOR FILE -->
+  <section class="file-block">
+
+    <div class="bezel portrait">
+      <div class="crt">
+        <img src="images/frontpage.png" alt="Pelayo Figaredo">
       </div>
-      <div class="col-md-8 text-center">
-        <p data-i18n="index_p2">Desarrollador de videojuegos y amante del diseño, la música, el cine , el arte 3D y la programacíon.</p>
-        <p data-i18n="index_p3">Creo en el poder de la nueva frontera digital interactiva para cambiar las vidas de la gente a través de experiencias únicas, trascendentales y personales.</p>
-        <p data-i18n="index_p4">Actualmente resido en Madrid, donde trabajo en la creacion de experiencias VR enfocadas a la enseñanza. </p>
-        <p data-i18n="index_p5">Siempre en busca de oportunidades para aprender y crear nuevos proyectos.</p>
+      <div class="bezel__chin">
+        <span>Cam 01</span>
+        <span>Madrid</span>
       </div>
     </div>
-  </div>
-</section>
+
+    <div>
+      <div class="rail">
+        <h2 class="rail__title" data-i18n="ui_profile">Profile</h2>
+        <span class="rail__line"></span>
+        <span class="label label--ghost">Rec. 2017&ndash;</span>
+      </div>
+
+      <ul class="log">
+        <li><p data-i18n="index_p2">Video game developer, and lover of design, music, cinema, 3D art and programming.</p></li>
+        <li><p data-i18n="index_p3">I believe in the power that the new digital and interactive frontier holds to change lives through unique transcendent and personal experiences.</p></li>
+        <li><p data-i18n="index_p4">Currently living in Madrid, while working on VR experiences aimed at education.</p></li>
+        <li><p data-i18n="index_p5">Always looking for opportunities to learn and create new projects.</p></li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
 
 <!--Footer-->
-<section>
-  <div id="footer"> </div>
-  <script>
-$(function(){
-  $("#footer").load("footer.html #footer");
+<div id="footer"></div>
+<script>
+$(function () {
+  $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
 });
-</script> 
-</section>
+</script>
 <!--Footer-->
 
-</body>
 <script src="js/nameChanger.js"></script>
-<script>startChange($("h1#name"),"Pelayo Figaredo","Octoyisus")</script>
+<script src="js/transport.js"></script>
+<script>startChange($("h1#name"), "Pelayo Figaredo", "Octoyisus")</script>
+</body>
 </html>

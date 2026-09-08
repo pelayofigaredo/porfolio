@@ -1,0 +1,505 @@
+/* ============================================================================
+   CASSETTE FUTURISM — design system
+   Cream shell plastic is the chassis; dark only lives inside screens and
+   control wells. Warm amber / rust signal on top.
+   Load order: bootstrap -> fonts.css -> cassette.css -> chrome.css -> page css
+   ============================================================================ */
+
+:root {
+  /* --- ground & shell plastic -------------------------------------------- */
+  --bg:          #cbc0aa;
+  --panel:       #eae0cd;
+  --panel-hi:    #f5eee0;
+  --panel-lo:    #dbcfb7;
+  --edge:        #b3a184;
+  --edge-hi:     #8a7658;
+  --edge-dark:   #6d5c43;
+
+  /* --- paper (J-cards, inserts) ------------------------------------------ */
+  --paper:       #f7f2e6;
+  --paper-2:     #ece4d2;
+
+  /* --- screens & wells (the only darks) ---------------------------------- */
+  --screen:      #100e0b;
+  --well:        #221c15;
+
+  /* --- accent set: the four label inks ----------------------------------- */
+  --acc-1:       #2fae55;   /* green  */
+  --acc-2:       #e0392a;   /* red    */
+  --acc-3:       #f2b829;   /* yellow */
+  --acc-4:       #12b2a6;   /* teal   */
+  --accent:      var(--acc-3);   /* each page overrides this */
+
+  /* --- signal ------------------------------------------------------------ */
+  --amber:       #e08a1e;
+  --amber-lit:   #ffb443;
+  --rust:        #b3400e;
+  --rust-dark:   #8a2f06;
+  --tape:        #6b4a2f;
+
+  /* --- ink --------------------------------------------------------------- */
+  --ink:         #211a13;
+  --text:        #31281d;
+  --text-dim:    #6a5b45;
+  --text-faint:  #8f8067;
+
+  /* --- type -------------------------------------------------------------- */
+  --font-display: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Consolas', ui-monospace, monospace;
+  --font-crt:     'VT323', 'JetBrains Mono', monospace;
+
+  /* --- geometry ---------------------------------------------------------- */
+  --r-sm: 3px;
+  --r-md: 6px;
+  --r-lg: 14px;
+}
+
+/* ============================================================================
+   BASE
+   ============================================================================ */
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 130% 90% at 50% -15%, rgba(255, 246, 228, .75), transparent 62%),
+    repeating-linear-gradient(90deg, rgba(109, 92, 67, .05) 0 1px, transparent 1px 64px),
+    repeating-linear-gradient(0deg,  rgba(109, 92, 67, .05) 0 1px, transparent 1px 64px);
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.65;
+  padding-top: 74px;
+  overflow-x: hidden;
+}
+
+/* soft warm vignette + film grain, never intercepts clicks */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background: radial-gradient(ellipse 95% 75% at 50% 45%, transparent 55%, rgba(109, 92, 67, .22) 100%);
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 900ms steps(4) infinite;
+}
+@keyframes grain {
+  0%   { background-position:   0px   0px; }
+  25%  { background-position: -37px  19px; }
+  50%  { background-position:  23px -41px; }
+  75%  { background-position: -19px -23px; }
+  100% { background-position:   0px   0px; }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: .01em;
+  color: var(--ink);
+}
+h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.08; }
+h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+h3 { font-size: 1.15rem; }
+
+p { color: var(--text); }
+
+a {
+  color: var(--rust);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(179, 64, 14, .4);
+  transition: color .15s, border-color .15s, background-color .15s;
+}
+a:hover, a:focus-visible {
+  color: var(--rust-dark);
+  border-bottom-color: var(--rust-dark);
+  background-color: rgba(179, 64, 14, .1);
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--rust);
+  outline-offset: 2px;
+}
+
+hr {
+  border: 0;
+  height: 6px;
+  background: repeating-linear-gradient(90deg, var(--edge-hi) 0 14px, transparent 14px 22px);
+  opacity: .55;
+  margin: 2.5rem 0;
+}
+
+::selection { background: var(--amber); color: var(--ink); }
+
+.page-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ============================================================================
+   PRIMITIVES
+   ============================================================================ */
+
+/* --- moulded panel -------------------------------------------------------- */
+.deck {
+  position: relative;
+  background: linear-gradient(180deg, var(--panel-hi), var(--panel) 55%, var(--panel-lo));
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .85),
+    inset 0 -3px 8px rgba(138, 118, 88, .3),
+    0 10px 26px rgba(74, 60, 40, .22);
+  padding: 1.75rem;
+  color: var(--text);
+}
+
+/* printed insert: whiter, matte, no moulding */
+.deck--shell {
+  background: linear-gradient(175deg, var(--paper) 0%, var(--paper-2) 100%);
+  border-color: var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 8px 22px rgba(74, 60, 40, .2);
+}
+
+/* corner screws */
+.deck--screws::before,
+.deck--screws::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 32%, #bfb094, var(--edge-dark) 78%);
+  box-shadow: inset 0 0 0 1px rgba(33, 26, 19, .35), 0 1px 0 rgba(255, 255, 255, .5);
+}
+.deck--screws::before { left: 10px; }
+.deck--screws::after  { right: 10px; }
+
+/* --- vent grille (the recurring motif) ----------------------------------- */
+.vent {
+  height: 22px;
+  border-radius: var(--r-sm);
+  background: repeating-linear-gradient(180deg,
+    rgba(109, 92, 67, .45) 0 2px,
+    rgba(255, 255, 255, .75) 2px 3px,
+    transparent 3px 6px);
+}
+
+/* --- colour band: the four label inks, as on a printed sleeve ------------ */
+.stripe {
+  display: block;
+  height: 9px;
+  border-radius: 2px;
+  background: linear-gradient(90deg,
+    var(--acc-1) 0 25%,
+    var(--acc-2) 25% 50%,
+    var(--acc-3) 50% 75%,
+    var(--acc-4) 75% 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .35),
+    inset 0 -2px 0 rgba(0, 0, 0, .22);
+}
+.stripe--thin { height: 5px; }
+
+/* --- stamped label -------------------------------------------------------- */
+.label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: .3em .85em .25em;
+  border-radius: var(--r-sm);
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .55);
+}
+.label--amber { background: var(--amber); color: var(--ink); }
+.label--rust  { background: var(--rust); color: var(--paper); }
+.label--accent { background: var(--accent); color: var(--ink); }
+.label--ghost {
+  background: transparent;
+  color: var(--text-dim);
+  border: 1px solid var(--edge-hi);
+  box-shadow: none;
+}
+
+/* --- meta line ----------------------------------------------------------- */
+.meta {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* --- LED ----------------------------------------------------------------- */
+.led {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #9a8c72;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .45), 0 0 0 1px rgba(33, 26, 19, .25);
+  vertical-align: middle;
+}
+.led--c1 { background: var(--acc-1); box-shadow: 0 0 0 1px rgba(0, 0, 0, .28), 0 0 7px var(--acc-1); }
+.led--c2 { background: var(--acc-2); box-shadow: 0 0 0 1px rgba(0, 0, 0, .28), 0 0 7px var(--acc-2); }
+.led--c3 { background: var(--acc-3); box-shadow: 0 0 0 1px rgba(0, 0, 0, .28), 0 0 7px var(--acc-3); }
+.led--c4 { background: var(--acc-4); box-shadow: 0 0 0 1px rgba(0, 0, 0, .28), 0 0 7px var(--acc-4); }
+.led--c1, .led--c2, .led--c3, .led--c4 { animation: pulse 3.2s ease-in-out infinite; }
+.led--c2 { animation-delay: .5s; }
+.led--c3 { animation-delay: 1s; }
+.led--c4 { animation-delay: 1.5s; }
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: .5; }
+}
+
+/* --- CRT screen: the dark heart of every device -------------------------- */
+.crt {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--screen);
+  box-shadow:
+    inset 0 0 0 2px rgba(33, 26, 19, .55),
+    inset 0 0 60px rgba(0, 0, 0, .85);
+}
+.crt::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+  background: radial-gradient(ellipse 100% 100% at 50% 50%, transparent 62%, rgba(0, 0, 0, .42) 100%);
+}
+.crt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(160deg, rgba(255, 245, 225, .10) 0 26%, transparent 40%);
+}
+.crt img,
+.crt iframe {
+  display: block;
+  width: 100%;
+  filter: saturate(.94) contrast(1.03);
+}
+
+/* --- bezel: the moulded frame around a screen ---------------------------- */
+.bezel {
+  position: relative;
+  padding: 14px 14px 34px;
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, var(--panel-hi) 0%, var(--panel) 65%, var(--panel-lo) 100%);
+  border: 1px solid var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    inset 0 -3px 10px rgba(138, 118, 88, .35),
+    0 12px 30px rgba(74, 60, 40, .25);
+}
+.bezel__chin {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 9px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: .6rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+@media (max-width: 575.98px) {
+  .bezel { padding: 10px 10px 12px; }
+  .bezel__chin {
+    position: static;
+    height: auto;
+    margin-top: .55rem;
+    gap: .6rem;
+    font-size: .55rem;
+    letter-spacing: .14em;
+  }
+}
+
+/* --- section heading rail ------------------------------------------------ */
+.rail {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.4rem;
+}
+.rail__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.rail__line {
+  flex: 1;
+  height: 8px;
+  border-radius: 2px;
+  background: repeating-linear-gradient(90deg, var(--edge-hi) 0 3px, transparent 3px 8px);
+  opacity: .75;
+}
+
+/* ============================================================================
+   PAGE BUILDING BLOCKS (shared by every page)
+   ============================================================================ */
+
+/* --- page head ------------------------------------------------------------ */
+.page-head {
+  margin: 2.5rem 0 3rem;
+  padding: 1.1rem 1.4rem 1.8rem;
+}
+.page-head__strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+.page-head__strip .stripe { flex: 1; }
+.page-head__lamps { display: flex; align-items: center; gap: .5rem; }
+
+.page-head h1 {
+  max-width: 22ch;
+  margin: 0 0 .6rem;
+  font-size: clamp(1.7rem, 4.4vw, 2.9rem);
+  text-transform: uppercase;
+}
+.page-head__sub {
+  max-width: 62ch;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: .84rem;
+  line-height: 1.7;
+  letter-spacing: .04em;
+  color: var(--text-dim);
+}
+
+/* --- prose ---------------------------------------------------------------- */
+.prose p {
+  margin: 0 0 1.1rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  max-width: 78ch;
+}
+.prose p:last-child { margin-bottom: 0; }
+
+/* --- two-column split ----------------------------------------------------- */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: clamp(1.25rem, 3.5vw, 2.5rem);
+  align-items: start;
+}
+@media (max-width: 767.98px) {
+  .split { grid-template-columns: 1fr; }
+}
+
+/* --- a framed still ------------------------------------------------------- */
+.plate {
+  position: relative;
+  padding: 10px 10px 26px;
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+  border: 1px solid var(--edge);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .9),
+    0 8px 20px rgba(74, 60, 40, .22);
+}
+.plate img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(33, 26, 19, .18);
+  filter: saturate(.95) contrast(1.02);
+}
+.plate__cap {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 7px;
+  font-family: var(--font-mono);
+  font-size: .58rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+/* --- viewer: a screen in a bezel ----------------------------------------- */
+.viewer { margin: 1.75rem 0 0; }
+.viewer .embed-responsive { border-radius: var(--r-md); overflow: hidden; }
+.viewer iframe { display: block; }
+
+/* --- gallery grid --------------------------------------------------------- */
+.shot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.shot {
+  position: relative;
+  padding: 8px;
+  border-radius: var(--r-md);
+  background: linear-gradient(180deg, var(--paper), var(--paper-2));
+  border: 1px solid var(--edge);
+  box-shadow: 0 6px 16px rgba(74, 60, 40, .2);
+  transition: border-color .18s, transform .18s, box-shadow .18s;
+}
+.shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(33, 26, 19, .18);
+  filter: saturate(.9) contrast(1.02);
+  transition: filter .18s;
+}
+.shot:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(74, 60, 40, .3);
+}
+.shot:hover img { filter: none; }
+
+/* ============================================================================
+   REDUCED MOTION
+   ============================================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body::after { animation: none; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}
