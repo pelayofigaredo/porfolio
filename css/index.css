@@ -128,14 +128,23 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
 /* --- tape label text ----------------------------------------------------- */
 .tape__label { min-width: 0; text-align: center; }
 
+/* Fixed box, scaling type: the title never changes the deck's height, so
+   swapping tracks cannot shove the rest of the page around. JS sizes the
+   text to fill the width (js/nameChanger.js); the clamp is the no-JS value. */
 .tape__label h1 {
-  margin: .1em 0 .15em;
+  height: clamp(2.4rem, 7.6vw, 4rem);
+  margin: .35rem 0 .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1;
   font-size: clamp(1.75rem, 6.2vw, 3.6rem);
   font-weight: 700;
   letter-spacing: .02em;
   color: var(--ink);
   text-transform: uppercase;
-  word-break: break-word;
 }
 .tape__label .tape__side {
   font-family: var(--font-mono);
@@ -195,8 +204,9 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
   transform: translateY(2px);
   box-shadow: 0 0 0 rgba(0, 0, 0, .55);
 }
-/* the key that is down stays down, and lights */
-.transport__key[aria-pressed="true"] {
+/* the key that is down stays down, and lights; a seeking key flashes the same */
+.transport__key[aria-pressed="true"],
+.transport__key.is-seeking {
   background: linear-gradient(180deg, var(--amber-lit), var(--amber));
   border-color: #9c5c0e;
   color: var(--ink);
@@ -238,7 +248,7 @@ body { --accent: var(--acc-3); }   /* this page's label ink: yellow */
 
 /* --- portrait: same bezel as the rest of the screens, raster off --------- */
 .portrait { padding: 12px 12px 32px; }
-.portrait .crt img { filter: contrast(1.05) saturate(1); }
+.portrait .crt img { filter: contrast(1.05); }   /* the photo is already monochrome */
 
 /* --- log lines ----------------------------------------------------------- */
 .log {

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Fragments injected into other pages, not documents in their own right
+Disallow: /navBar.html
+Disallow: /footer.html
+
+Sitemap: https://www.pelayofigaredo.com/sitemap.xml

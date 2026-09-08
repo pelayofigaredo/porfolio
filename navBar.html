@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="robots" content="noindex">
 <!-- This document is only ever consumed as the #navBar fragment (jQuery .load),
      so it carries no scripts or styles of its own. -->
 <title>navBar</title>
@@ -46,8 +47,12 @@
           </div>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="studies.html" data-i18n="navBar_30">Studies</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCareer" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-i18n="navBar_40">Career</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownCareer">
+            <a class="dropdown-item" href="studies.html" data-i18n="navBar_30">Studies</a>
+            <a class="dropdown-item" href="immersiveOasis.html">Immersive Oasis</a>
+          </div>
         </li>
 
       </ul>

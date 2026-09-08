@@ -1,0 +1,30 @@
+/* ============================================================================
+   IMMERSIVE OASIS
+   ============================================================================ */
+
+body { --accent: var(--acc-1); }   /* career pages share the green ink */
+
+.oasis-block { margin-bottom: 2.25rem; }
+
+/* the year on a stamped display, like the ones in the archive */
+.since {
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: .1rem .7rem;
+  border: 1px solid var(--edge);
+  border-radius: var(--r-sm);
+  background: #0d0b08;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, .9);
+  font-family: var(--font-crt);
+  font-size: 1.6rem;
+  line-height: 1.3;
+  letter-spacing: .12em;
+  color: var(--accent);
+  text-shadow: 0 0 9px var(--accent);
+}
+
+@media (max-width: 575.98px) {
+  .oasis-block .rail { flex-wrap: wrap; gap: .7rem; }
+  .oasis-block .rail__line { display: none; }
+}

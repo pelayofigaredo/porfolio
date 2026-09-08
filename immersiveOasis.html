@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--JQuery-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!--Localization-->
+<script src="jquery_i18n/CLDRPluralRuleParser.js"></script>
+<script src="jquery_i18n/jquery.i18n.js"></script>
+<script src="jquery_i18n/jquery.i18n.messagestore.js"></script>
+<script src="jquery_i18n/jquery.i18n.fallbacks.js"></script>
+<script src="jquery_i18n/jquery.i18n.language.js"></script>
+<script src="jquery_i18n/jquery.i18n.parser.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.js"></script>
+<script src="jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+<!--Concrete Localization-->
+<script src="jquery_i18n/main-jquery_i18n.js"></script>
+
+<!-- Bootstrap -->
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+
+<!-- CSS -->
+<link href="css/fonts.css" rel="stylesheet">
+<link href="css/cassette.css" rel="stylesheet">
+<link href="css/chrome.css" rel="stylesheet">
+<link href="css/immersive.css" rel="stylesheet">
+
+<title>Immersive Oasis — Pelayo Figaredo</title>
+<meta name="description" content="Serious gaming and virtual reality experiences built at Immersive Oasis, an XR studio in Asturias, Spain.">
+<link rel="canonical" href="https://www.pelayofigaredo.com/immersiveOasis.html">
+
+<!-- Social cards -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Pelayo Figaredo">
+<meta property="og:title" content="Immersive Oasis — Pelayo Figaredo">
+<meta property="og:description" content="Serious gaming and virtual reality experiences built at Immersive Oasis, an XR studio in Asturias, Spain.">
+<meta property="og:url" content="https://www.pelayofigaredo.com/immersiveOasis.html">
+<meta property="og:image" content="https://www.pelayofigaredo.com/images/og/immersiveoasis.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Immersive Oasis — Pelayo Figaredo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Immersive Oasis — Pelayo Figaredo">
+<meta name="twitter:description" content="Serious gaming and virtual reality experiences built at Immersive Oasis, an XR studio in Asturias, Spain.">
+<meta name="twitter:image" content="https://www.pelayofigaredo.com/images/og/immersiveoasis.jpg">
+<link rel="icon" href="images/icon.ico">
+</head>
+<body>
+
+<!--Navigation bar-->
+<div id="nav"></div>
+<script>
+$(function () {
+  $("#nav").load("navBar.html #navBar", function () { $("body").i18n(); });
+});
+</script>
+<!--end of Navigation bar-->
+
+<main class="page-wrap">
+
+  <!-- PAGE HEAD -->
+  <section class="deck deck--screws page-head">
+    <div class="page-head__strip">
+      <span class="label label--accent" data-i18n="ui_work">Work</span>
+      <span class="stripe" aria-hidden="true"></span>
+      <span class="page-head__lamps">
+        <span class="led led--c1"></span>
+        <span class="led led--c2"></span>
+        <span class="led led--c3"></span>
+        <span class="led led--c4"></span>
+      </span>
+    </div>
+    <h1>Immersive Oasis</h1>
+    <p class="page-head__sub" data-i18n="oasis_sub">I have been part of Immersive Oasis since 2021, an extended reality studio based in Asturias.</p>
+  </section>
+
+  <!-- THE STUDIO -->
+  <section class="deck deck--screws oasis-block">
+    <div class="rail">
+      <span class="since">2021</span>
+      <h2 class="rail__title" data-i18n="oasis_h_studio">The studio</h2>
+      <span class="rail__line"></span>
+      <span class="label label--ghost">XR &middot; Asturias</span>
+    </div>
+
+    <div class="prose">
+      <p data-i18n="[html]oasis_p1"><a href="https://immersiveoasis.io" target="_blank" rel="noopener">Immersive Oasis</a> designs and develops interactive and immersive experiences for Extended Reality (XR) and spatial computing. It was founded in Asturias in 2020 and works with both companies and public institutions.</p>
+      <p data-i18n="oasis_p2">Its main lines are virtual reality applications, location-based entertainment, mixed reality content and 360-degree video, along with the hardware support that goes with them.</p>
+      <p data-i18n="oasis_p3">The work splits mainly between healthcare, industry and tourism: medical training and digital therapies for pharmaceutical companies such as Daiichi Sankyo, AstraZeneca, Bayer and Sanofi; simulation and visualisation for industry; and heritage projects with town councils like Oviedo and Aller.</p>
+    </div>
+  </section>
+
+  <!-- MY ROLE -->
+  <section class="deck deck--screws oasis-block">
+    <div class="rail">
+      <h2 class="rail__title" data-i18n="oasis_h_role">My work there</h2>
+      <span class="rail__line"></span>
+    </div>
+
+    <div class="prose">
+      <p data-i18n="oasis_p4">I am lead developer and CTO at the studio, and sometimes a graphics programmer too. I have worked on every project except the video-only ones.</p>
+    </div>
+
+    <!-- The reel goes here. Drop in the YouTube id and delete these comment
+         markers; this is the same block the archive pages use.
+
+    <div class="viewer bezel">
+      <div class="crt">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Immersive Oasis reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="bezel__chin"><span>Reel</span><span>Immersive Oasis</span></div>
+    </div>
+    -->
+  </section>
+
+</main>
+
+<!--Footer-->
+<div id="footer"></div>
+<script>
+$(function () {
+  $("#footer").load("footer.html #footer", function () { $("body").i18n(); });
+});
+</script>
+<!--Footer-->
+
+</body>
+</html>
