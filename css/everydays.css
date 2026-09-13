@@ -1,9 +1,8 @@
-/* EVERYDAYS — the render archive on one big monitor */
-
+/* EVERYDAYS — the render archive on one monitor, driven by transport keys */
 
 .monitor {
   margin: 0 0 2.5rem;
-  padding: 18px 18px 40px;
+  padding: 18px;
 }
 
 .monitor .carousel-item img {
@@ -12,76 +11,10 @@
   height: auto;
 }
 
-.monitor .carousel-control-prev,
-.monitor .carousel-control-next { z-index: 20; }
-
-.monitor__chin {
-  position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 11px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.monitor__chin .meta { color: rgba(23, 19, 15, .55); }
-
-.monitor__count {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: .5rem;
-  padding: .05rem .55rem;
-  border-radius: 2px;
-  background: #0d0b08;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, .9);
-  font-family: var(--font-crt);
-  font-size: 1rem;
-  line-height: 1.4;
-  color: var(--amber);
-  text-shadow: 0 0 6px rgba(242, 160, 61, .6);
-  letter-spacing: .14em;
-}
-
-.monitor__knobs {
-  display: flex;
-  align-items: center;
-  gap: .55rem;
-}
-.knob {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 32%, var(--panel-hi), var(--edge-hi) 78%);
-  box-shadow:
-    inset 0 -2px 3px rgba(109, 92, 67, .7),
-    0 1px 2px rgba(74, 60, 40, .45);
-  position: relative;
-}
-.knob::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  width: 2px;
-  height: 5px;
-  margin-left: -1px;
-  border-radius: 1px;
-  background: rgba(23, 19, 15, .6);
-}
-.knob--turned::after { transform: rotate(52deg); transform-origin: 50% 6px; }
+/* the keys sit inside the bezel, as the monitor's own control panel */
+.monitor .transport { margin-top: 14px; }
 
 @media (max-width: 575.98px) {
-  .monitor { padding: 10px 10px 12px; }
-  .monitor__knobs { display: none; }
-  .monitor__chin {
-    position: static;
-    left: auto;
-    right: auto;
-    bottom: auto;
-    margin-top: .55rem;
-    gap: .6rem;
-  }
-  .monitor__chin .meta { font-size: .55rem; letter-spacing: .12em; }
-  .monitor__count { font-size: .85rem; letter-spacing: .1em; }
+  .monitor { padding: 10px; }
+  .monitor .transport { margin-top: 10px; gap: .3rem; padding: .45rem .5rem; }
 }
