@@ -52,6 +52,10 @@ jQuery(document).ready(function() {
       'oasis_p3': 'The work splits mainly between healthcare, industry and tourism: medical training and digital therapies for pharmaceutical companies such as Daiichi Sankyo, AstraZeneca, Bayer and Sanofi; simulation and visualisation for industry; and heritage projects with town councils like Oviedo and Aller.',
       'oasis_h_role': 'My work there',
       'oasis_p4': 'I am lead developer and CTO at the studio, and sometimes a graphics programmer too. I have worked on every project except the video-only ones.',
+      'oasis_h_results': 'The results',
+      'oasis_p5': 'One of the best things about working at Immersive Oasis is that what we build ends up being useful to someone: medical training, rehabilitation, therapy…',
+      'oasis_p6': 'For example, one of the games in our digital therapies application, a two-handed painting exercise I conceived, has been the subject of a study published in <em>Applied Sciences</em>. We did not run the study ourselves: an outside team compared the virtual reality version against the camera-based one across eighteen participants, measuring satisfaction, heart rate and perceived exertion.',
+      'oasis_cta': 'Read the study',
 
       'index_p1' : 'Digital storytelling.',
       'index_p2' : 'Video game developer, and lover of design, music, cinema, 3D art and programming.',
@@ -131,6 +135,10 @@ jQuery(document).ready(function() {
       'oasis_p3': 'El trabajo se reparte sobre todo entre salud, industria y turismo: formación médica y terapias digitales para farmacéuticas como Daiichi Sankyo, AstraZeneca, Bayer o Sanofi; simulación y visualización para industria; y proyectos de patrimonio con ayuntamientos como los de Oviedo y Aller.',
       'oasis_h_role': 'Mi trabajo allí',
       'oasis_p4': 'Soy lead developer y CTO de la empresa, y en ocasiones también programador gráfico. He trabajado en todos los proyectos, salvo en los que son exclusivamente de vídeo.',
+      'oasis_h_results': 'Los resultados',
+      'oasis_p5': 'Una de las mejores cosas de trabajar en Immersive Oasis es que lo que construimos acaba sirviéndole a alguien: formación médica, rehabilitación, terapia…',
+      'oasis_p6': 'Por ejemplo, uno de los juegos de nuestra aplicación de terapias digitales —un ejercicio de pintura a dos manos que ideé— ha sido objeto de un estudio publicado en <em>Applied Sciences</em>. El estudio no lo hicimos nosotros: un equipo externo comparó la versión de realidad virtual con la de cámara en dieciocho participantes, midiendo satisfacción, frecuencia cardíaca y esfuerzo percibido.',
+      'oasis_cta': 'Leer el estudio',
 
       'index_p1' : 'Narrativa digital.',
       'index_p2' : 'Desarrollador de videojuegos y amante del diseño, la música, el cine, el arte 3D y la programación.',

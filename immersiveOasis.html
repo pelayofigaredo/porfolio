@@ -28,6 +28,7 @@
 <link href="css/fonts.css" rel="stylesheet">
 <link href="css/cassette.css" rel="stylesheet">
 <link href="css/chrome.css" rel="stylesheet">
+<link href="css/oasis.css" rel="stylesheet">
 
 <title>Immersive Oasis — Pelayo Figaredo</title>
 <meta name="description" content="Serious gaming and virtual reality experiences built at Immersive Oasis, an XR studio in Asturias, Spain.">
@@ -73,8 +74,15 @@ $(function () {
         <span class="led led--c4"></span>
       </span>
     </div>
-    <h1>Immersive Oasis</h1>
-    <p class="page-head__sub" data-i18n="oasis_sub">I have been part of Immersive Oasis since 2021, an extended reality studio based in Asturias.</p>
+    <div class="page-head__lockup">
+      <figure class="io-mark">
+        <img src="images/io_logo.png" alt="Immersive Oasis">
+      </figure>
+      <div>
+        <h1>Immersive Oasis</h1>
+        <p class="page-head__sub" data-i18n="oasis_sub">I have been part of Immersive Oasis since 2021, an extended reality studio based in Asturias.</p>
+      </div>
+    </div>
   </section>
 
   <!-- The studio -->
@@ -104,17 +112,32 @@ $(function () {
       <p data-i18n="oasis_p4">I am lead developer and CTO at the studio, and sometimes a graphics programmer too. I have worked on every project except the video-only ones.</p>
     </div>
 
-    <!-- Reel: drop in the YouTube id and uncomment.
-
     <div class="viewer bezel">
       <div class="crt">
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Immersive Oasis reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/Owo6pQcR4ug" title="Immersive Oasis reel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
       <div class="bezel__chin"><span>Reel</span><span>Immersive Oasis</span></div>
     </div>
-    -->
+  </section>
+
+  <!-- The results -->
+  <section class="deck deck--screws stack">
+    <div class="rail">
+      <h2 class="rail__title" data-i18n="oasis_h_results">The results</h2>
+      <span class="rail__line"></span>
+    </div>
+
+    <div class="prose">
+      <p data-i18n="oasis_p5">One of the best things about working at Immersive Oasis is that what we build ends up being useful to someone: medical training, rehabilitation, therapy…</p>
+      <p data-i18n="[html]oasis_p6">For example, one of the games in our digital therapies application, a two-handed painting exercise I conceived, has been the subject of a study published in <em>Applied Sciences</em>. We did not run the study ourselves: an outside team compared the virtual reality version against the camera-based one across eighteen participants, measuring satisfaction, heart rate and perceived exertion.</p>
+    </div>
+
+    <div class="get-it">
+      <a class="btn-mech btn-mech--amber" href="https://www.mdpi.com/2076-3417/16/19/9505" target="_blank" rel="noopener" data-i18n="oasis_cta">Read the study</a>
+      <span class="meta">Applied Sciences 16(19) &middot; 9505<br><span class="doi">doi 10.3390/app16199505</span></span>
+    </div>
   </section>
 
 </main>

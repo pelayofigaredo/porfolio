@@ -404,6 +404,17 @@ hr {
 
 .stack { margin-bottom: 2.25rem; }
 
+/* --- a call to action, set apart from the copy above it ------------------ */
+.get-it {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.8rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--edge);
+}
+
 /* --- transport keys: the deck on the landing, the gallery controls ----------------------------------------- */
 .transport {
   display: flex;
